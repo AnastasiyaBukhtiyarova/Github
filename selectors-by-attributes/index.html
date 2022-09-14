@@ -15,7 +15,7 @@
     li  {
       margin-bottom: 16px;
     }
-    [target="_blank"] {
+    a[target="_blank"] {
       border: 2px solid black;
     }
     a[href^="broken"] {
@@ -27,15 +27,15 @@
     a[href*="www"] {
       color: green;
     }
-    [lang|="en"] {
+    a[lang|="en"] {
       font-size: 10px;
     }
-    a[title*="popular"] {
+    a[title~="super-popular"] {
       font-size: 24px;
     }
   </style>
   <body>
-    <ul style="margin:0;">
+    <ul>
       <li>
         <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
       </li>
