@@ -12,10 +12,10 @@
     <title>Operators in attribute selectors</title>
   </head>
   <style>
-    li  {
+    ul li  {
       margin-bottom: 16px;
     }
-    a[target="_blank"] {
+    a[target|="_blank"] {
       border: 2px solid black;
     }
     a[href^="broken"] {
@@ -30,12 +30,12 @@
     a[lang|="en"] {
       font-size: 10px;
     }
-    a[title~="super-popular"] {
+    a[title*="popular"] {
       font-size: 24px;
     }
   </style>
   <body>
-    <ul>
+    <ul style="margin:0 ;">
       <li>
         <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
       </li>
