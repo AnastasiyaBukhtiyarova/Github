@@ -12,22 +12,22 @@
     <link rel="stylesheet" type="text/css" href="selectors.css" />
   </head>
 <style>
- ul > li {
+ ul li {
     margin-bottom: 16px;
   }
-  a[target="_blank"] {
+  [target="_blank"] {
     border: 2px solid black;
   }
-  a[href^="broken"] {
+  [href^="broken"] {
     border: 2px solid red;
   }
-  a[href$=".com"] {
+  [href$=".com"] {
 margin-left: 50px;
   }
   [lang="en"] {
     font-size: 10px;
   }
-  a[href*="www"] {
+  [href*="www"] {
     color:green;
   }
   [title~="popular"] {
@@ -37,6 +37,7 @@ margin-left: 50px;
   <body>
     <h1 class="page-header">Operators in attribute selectors</h1>
 
+    
     <ul>
       <li>
         <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
