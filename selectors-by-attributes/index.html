@@ -12,11 +12,11 @@
     <title>Operators in attribute selectors</title>
   </head>
   <style>
-    li {
+    li  {
       margin-bottom: 16px;
     }
-    a[target="_blank"] {
-      border: 1px solid black;
+    [target="_blank"] {
+      border: 2px solid black;
     }
     a[href^="broken"] {
       border: 2px solid red;
@@ -35,7 +35,7 @@
     }
   </style>
   <body>
-    <ul>
+    <ul style="margin:0;">
       <li>
         <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
       </li>
