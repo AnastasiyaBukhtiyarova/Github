@@ -11,33 +11,33 @@
     />
     <link rel="stylesheet" type="text/css" href="selectors.css" />
   </head>
-<style>
- li {
-    margin-bottom: 16px;
-  }
-  a[target^="_blank"] {
-    border: 2px solid black;
-  }
-  a[href^="broken"] {
-    border: 2px solid red;
-  }
-  a[href$=".com"] {
-margin-left: 50px;
-  }
-  [lang="en"] {
-    font-size: 10px;
-  }
-  [href*="www"] {
-    color:green;
-  }
-  [title~="popular"] {
-    font-size: 24px;
-  }
-</style>
+  <style>
+    li {
+      margin-bottom: 16px;
+    }
+    a[target="_blank"] {
+      border: 2px solid black;
+    }
+    a[href^="broken"] {
+      border: 2px solid red;
+    }
+    a[href$=".com"] {
+      margin-left: 50px;
+    }
+    a[href*="www"] {
+      color: green;
+    }
+       [lang|="en"] {
+      font-size: 10px;
+    }
+    a[title~="popular"] {
+      font-size: 24px;
+    }
+ 
+  </style>
   <body>
     <h1 class="page-header">Operators in attribute selectors</h1>
 
-    
     <ul>
       <li>
         <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
@@ -49,7 +49,9 @@ margin-left: 50px;
         <a href="https://www.google.com" title="item popular">Google</a>
       </li>
       <li>
-        <a href="https://www.opera.com" title="popular item" lang="en-us">Opera</a>
+        <a href="https://www.opera.com" title="popular item" lang="en-us"
+          >Opera</a
+        >
       </li>
       <li>
         <a href="https://www.apple.com" title="link popular">Apple</a>
