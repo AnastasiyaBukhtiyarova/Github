@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Operators in attribute selectors</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -10,6 +9,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="selectors.css" />
+    <title>Operators in attribute selectors</title>
   </head>
   <style>
     li {
@@ -27,17 +27,14 @@
     a[href*="www"] {
       color: green;
     }
-       [lang|="en"] {
+    [lang|="en"] {
       font-size: 10px;
     }
     a[title~="popular"] {
       font-size: 24px;
     }
- 
   </style>
   <body>
-    <h1 class="page-header">Operators in attribute selectors</h1>
-
     <ul>
       <li>
         <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
