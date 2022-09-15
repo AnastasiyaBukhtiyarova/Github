@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Operators in attribute selectors</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -9,13 +10,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="selectors.css" />
-    <title>Operators in attribute selectors</title>
   </head>
   <style>
-    ul li  {
+    li {
       margin-bottom: 16px;
     }
-    a[target|="_blank"] {
+    a[target="_blank"] {
       border: 2px solid black;
     }
     a[href^="broken"] {
@@ -24,18 +24,18 @@
     a[href$=".com"] {
       margin-left: 50px;
     }
+    a[lang*="en"] {
+      font-size: 10px;
+    }
     a[href*="www"] {
       color: green;
-    }
-    a[lang|="en"] {
-      font-size: 10px;
     }
     a[title*="popular"] {
       font-size: 24px;
     }
   </style>
   <body>
-    <ul style="margin:0 ;">
+    <ul>
       <li>
         <a href="https://www.mozilla.org" title="link" lang="en-gb">Mozilla</a>
       </li>
