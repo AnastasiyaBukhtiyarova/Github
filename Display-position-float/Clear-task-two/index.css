@@ -1,0 +1,8 @@
+.container {
+  box-sizing: border-box;
+  width: 50%;
+}
+.red {
+  background-color: red;
+  float: right;
+}
