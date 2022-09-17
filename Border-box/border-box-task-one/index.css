@@ -1,4 +1,7 @@
 
+body {
+  background-color: antiquewhite;
+}
 .box-sizing {
   width: 512px;
   height: 128px;
