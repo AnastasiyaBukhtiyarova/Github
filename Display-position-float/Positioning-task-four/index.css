@@ -1,17 +1,19 @@
 .header {
   background-color: darkturquoise;
   height: 40px;
- 
+  position: fixed;
+  width: 100%;
 }
 .nav-list {
   height: 40px;
   margin-left: 16px;
   color: white;
- 
+ margin: 0;
 }
 .nav-item {
   display: inline-block;
 line-height: 2.5;
+margin-right: 16px;
 }
 .content {
   background-color: beige;
