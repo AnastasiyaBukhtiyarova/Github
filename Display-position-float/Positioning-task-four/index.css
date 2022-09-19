@@ -3,23 +3,24 @@
   background-color: darkturquoise;
   height: 40px;
   position: fixed;
-  line-height: 0.4;
+
 }
 .nav-list {
   height: 40px;
   margin-left: 16px;
   color: white;
- 
+ margin-top: 11px;
 }
 .nav-item {
   display: inline-block;
+    margin-right: 16px;
 }
 .content {
   background-color: beige;
   height: 5000px;
 }
 .head {
-  position: absolute;
+  position: relative;
   top: calc(50%);
   left: calc(50%);
   background-color: aquamarine;
@@ -48,7 +49,7 @@
   height: 60px;
   width: 40px;
   background-color: brown;
-  position: absolute;
+  position: relative;
   top: -60px;
   left: -40px;
 }
