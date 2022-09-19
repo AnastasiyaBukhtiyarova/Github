@@ -3,17 +3,18 @@
   background-color: darkturquoise;
   height: 40px;
   position: fixed;
+   
 
 }
 .nav-list {
   height: 40px;
-  margin-left: 16px;
   color: white;
- margin-top: 11px;
+margin-left: 16px;
+margin-top: 10px;
 }
 .nav-item {
   display: inline-block;
-    margin-right: 16px;
+  margin-right: 16px;
 }
 .content {
   background-color: beige;
