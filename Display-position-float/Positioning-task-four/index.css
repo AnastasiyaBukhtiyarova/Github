@@ -1,32 +1,30 @@
 .header {
-  width: 100%;
   background-color: darkturquoise;
   height: 40px;
-  position: fixed;
-   
-
+ 
 }
 .nav-list {
   height: 40px;
+  margin-left: 16px;
   color: white;
-margin-left: 16px;
-margin-top: 10px;
+ 
 }
 .nav-item {
   display: inline-block;
-  margin-right: 16px;
+line-height: 2.5;
 }
 .content {
   background-color: beige;
   height: 5000px;
 }
 .head {
-  position: relative;
-  top: calc(50%);
-  left: calc(50%);
+   position: absolute;
+ top: calc(50%);
+ left: calc(50%);
   background-color: aquamarine;
   height: 200px;
   width: 200px;
+
 }
 .eye_right {
   background-color: grey;
@@ -36,21 +34,21 @@ margin-top: 10px;
   position: absolute;
   top: 80px;
   right: 40px;
-}
+ }
 .eye_left {
   background-color: grey;
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  position: absolute;
-  top: 80px;
-  left: 40px;
+ position: absolute;
+ top: 80px;
+ left: 40px;
 }
 .ear_left {
   height: 60px;
   width: 40px;
   background-color: brown;
-  position: relative;
+ position: absolute;
   top: -60px;
   left: -40px;
 }
@@ -59,7 +57,7 @@ margin-top: 10px;
   width: 40px;
   background-color: brown;
   margin-left: 200px;
-  position: absolute;
+position: absolute;
   top: -60px;
   right: -40px;
 }
