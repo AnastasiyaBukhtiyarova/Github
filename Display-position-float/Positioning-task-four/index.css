@@ -1,0 +1,63 @@
+.header {
+  background-color: darkturquoise;
+  height: 40px;
+ 
+}
+.nav-list {
+  height: 40px;
+  margin-left: 16px;
+  color: white;
+ 
+}
+.nav-item {
+  display: inline-block;
+line-height: 2.3;
+}
+.content {
+  background-color: beige;
+  height: 5000px;
+}
+.head {
+   position: absolute;
+ top: calc(50%);
+ left: calc(50%);
+  background-color: aquamarine;
+  height: 200px;
+  width: 200px;
+
+}
+.eye_right {
+  background-color: grey;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 80px;
+  right: 40px;
+ }
+.eye_left {
+  background-color: grey;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+ position: absolute;
+ top: 80px;
+ left: 40px;
+}
+.ear_left {
+  height: 60px;
+  width: 40px;
+  background-color: brown;
+ position: absolute;
+  top: -60px;
+  left: -40px;
+}
+.ear_right {
+  height: 60px;
+  width: 40px;
+  background-color: brown;
+  margin-left: 200px;
+position: absolute;
+  top: -60px;
+  right: -40px;
+}
