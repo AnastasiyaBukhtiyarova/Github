@@ -14,7 +14,7 @@
 .nav-item {
   display: inline-block;
 line-height: 2.5;
-margin-right: 16px;
+padding-left: 16px;
 
 }
 .content {
