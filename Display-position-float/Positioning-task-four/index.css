@@ -23,7 +23,7 @@ margin-right: 16px;
 }
 .head {
 position: absolute;
-top: calc(50%);
+top: calc(50% - 100px );
 left: calc(50% - 100px);
   background-color: aquamarine;
   height: 200px;
