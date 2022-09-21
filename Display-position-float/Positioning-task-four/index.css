@@ -9,11 +9,12 @@
   height: 40px;
   color: white;
  margin: 0;
+margin-left: 16px;
 }
 .nav-item {
   display: inline-block;
 line-height: 2.5;
-padding-left: 16px;
+
 
 }
 .content {
