@@ -3,6 +3,7 @@
   height: 40px;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 .nav-list {
   height: 40px;
@@ -14,15 +15,18 @@
   display: inline-block;
 line-height: 2.5;
 margin-right: 16px;
+
 }
 .content {
   background-color: beige;
   height: 5000px;
 }
 .head {
+  margin: 0;
 position: absolute;
-top: 42%;
-left: calc(42%);
+top: calc(50%);
+left: calc(50%);
+right: calc(50%);
   background-color: aquamarine;
   height: 200px;
   width: 200px;
