@@ -24,9 +24,8 @@ margin-right: 16px;
 .head {
   margin: 0;
 position: absolute;
-top: calc(50%);
-left: calc(50%);
-right: calc(50%);
+margin-top: 200px;
+margin-left: 574.5px;
   background-color: aquamarine;
   height: 200px;
   width: 200px;
