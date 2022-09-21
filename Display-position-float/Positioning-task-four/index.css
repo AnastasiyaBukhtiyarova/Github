@@ -22,10 +22,9 @@ margin-right: 16px;
   height: 5000px;
 }
 .head {
-  margin: 0;
 position: absolute;
-margin-top: 200px;
-margin-left: 574.5px;
+top: calc(50%);
+left: calc(50%);
   background-color: aquamarine;
   height: 200px;
   width: 200px;
