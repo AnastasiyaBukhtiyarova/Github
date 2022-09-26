@@ -2,6 +2,8 @@ h1 {
   text-align: center;
 }
 .articles-list {
+     flex-wrap: wrap;
+ flex-grow: 1;
   display: flex;
  flex-basis: 200px;
 }
@@ -11,7 +13,7 @@ h1 {
   background-color: bisque;
   margin: 8px;
   padding: 16px;
-width: 200px;
+min-width: 200px;
 flex-basis: 200px;
 }
 
