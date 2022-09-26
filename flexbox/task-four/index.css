@@ -40,9 +40,11 @@ aside {
 .news {
   display: flex;
   justify-content: center;
+   margin-top: 16px;
+  margin-bottom: 16px;
 }
 .news-ul {
-  margin-bottom: 16px;
+ 
 margin-left: 16px;
   padding: 0;
   list-style: none;
