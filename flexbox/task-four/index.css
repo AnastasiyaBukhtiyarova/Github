@@ -12,13 +12,14 @@ header {
 }
 
 .list {
+ padding: 0;
   display: flex;
   list-style: none;
 }
 .list-nav {
    display: flex;
  align-items: center;
-  margin-right: 16px;
+  margin-left: 16px;
 }
 .content {
   display: flex;
@@ -39,16 +40,14 @@ aside {
 .news {
   display: flex;
   justify-content: center;
-  margin: 16px 0px;
 }
 .news-ul {
-
+margin-left: 16px;
   padding: 0;
   list-style: none;
 }
 li {
     height: 40px;
-  margin-left: 16px;
 }
 footer {
  display: flex;
