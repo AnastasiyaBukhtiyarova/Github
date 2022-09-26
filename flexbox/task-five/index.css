@@ -3,15 +3,15 @@ h1 {
 }
 .articles-list {
   display: flex;
-  flex-wrap: wrap;
- 
+ flex-basis: 200px;
 }
 .article {
    flex-wrap: wrap;
-  flex-grow: 1;
+ flex-grow: 1;
   background-color: bisque;
-  flex-basis: 300px;
   margin: 8px;
   padding: 16px;
- 
+width: 200px;
+flex-basis: 200px;
 }
+
