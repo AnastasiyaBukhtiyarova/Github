@@ -1,8 +1,16 @@
+
+
+h1 {
+  text-align: center;
+}
+.articles-list {
+  display: flex;
+  flex-direction: row;
+   min-width: 300px;
+ flex-grow: 1;
+}
 .article {
   margin: 8px;
   padding: 16px;
   background-color: bisque;
-  flex-grow: 1;
- min-width: 300px;
- flex-wrap: wrap;
 }
