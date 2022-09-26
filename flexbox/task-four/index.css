@@ -42,6 +42,7 @@ aside {
   justify-content: center;
 }
 .news-ul {
+  margin-bottom: 16px;
 margin-left: 16px;
   padding: 0;
   list-style: none;
