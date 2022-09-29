@@ -7,8 +7,7 @@
   box-sizing: border-box;
   flex-wrap: wrap;
   flex-grow: 1;
-  min-width: 324x;
- flex-basis: 324px;
+ flex-basis: 249px;
   margin: 8px;
   padding: 16px;
   background-color: bisque;
