@@ -4,10 +4,11 @@
   flex-grow: 1;
 }
 .article {
- box-sizing: border-box;
+  box-sizing: border-box;
   flex-wrap: wrap;
   flex-grow: 1;
- flex-basis: 250px;
+  min-width: 300px;
+ flex-basis: 324px;
   margin: 8px;
   padding: 16px;
   background-color: bisque;
