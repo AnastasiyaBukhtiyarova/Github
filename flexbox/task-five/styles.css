@@ -1,0 +1,16 @@
+.flex-container {
+  display: flex;
+  
+  flex-grow: 1;
+}
+.article {
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin: 8px;
+  padding: 16px;
+  background-color: bisque;
+  flex-basis: 300px;
+}
+header {
+  text-align: center;
+}
