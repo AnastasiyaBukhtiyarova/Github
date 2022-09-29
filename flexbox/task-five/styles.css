@@ -1,15 +1,14 @@
 .flex-container {
   display: flex;
-  
+  flex-wrap: wrap;
   flex-grow: 1;
 }
 .article {
-  flex-wrap: wrap;
-  flex-grow: 1;
+ box-sizing: border-box;
+ flex-basis: 300px;
   margin: 8px;
   padding: 16px;
   background-color: bisque;
-  flex-basis: 300px;
 }
 header {
   text-align: center;
