@@ -5,7 +5,9 @@
 }
 .article {
  box-sizing: border-box;
- flex-basis: 300px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+ flex-basis: 250px;
   margin: 8px;
   padding: 16px;
   background-color: bisque;
