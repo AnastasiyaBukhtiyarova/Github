@@ -1,20 +1,24 @@
 * {
   box-sizing: border-box;
 }
-.dropdown {
+div {
+  margin: 0;
   margin: 16px;
-  position: relative;
-  color: white;
-  display: inline-block;
+}
+.dropdown {
+  padding-top: 16px;
+display: inline-block;
 }
 .menu-button {
+  position: relative;
+  color: white;
   padding: 16px;
   background-color: darkgreen;
   opacity:0.8;
 }
 .menu-list {
   position: absolute;
-  top: 50px;
+  top: 65px;
   display: none;
   margin: 0;
   padding: 0;
