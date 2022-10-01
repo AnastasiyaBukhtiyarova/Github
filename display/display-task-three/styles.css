@@ -2,15 +2,13 @@
   box-sizing: border-box;
 }
 .dropdown {
- margin: 16px;
-  padding-top: 16px;
+  margin: 16px;
   position: relative;
   color: white;
   display: inline-block;
 }
 .menu-button {
-  margin-top: 16px;
- padding: 16px;
+  padding: 16px;
   background-color: darkgreen;
   opacity:0.8;
 }
