@@ -5,13 +5,15 @@ div {
   margin: 0;
   margin: 16px;
 }
+span {
+ line-height: 17px;
+}
 .dropdown {
   padding-bottom: 16px;
-  padding-top: 14px;
+    padding-top: 16px;
 display: inline-block;
 }
 .menu-button {
-  font-size: 16px;
   opacity: 0.8;
   position: relative;
   color: white;
