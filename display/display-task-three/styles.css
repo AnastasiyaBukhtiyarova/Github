@@ -13,14 +13,12 @@ div {
 display: inline-block;
 }
 .menu-button {
+  font-size: 16px;
   opacity: 0.8;
   position: relative;
   color: white;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  background-color: darkgreen;
+padding:16px ;
+ background-color: darkgreen;
 
 }
 .menu-list {
@@ -41,8 +39,6 @@ display: inline-block;
   padding:16px;
  }
 .dropdown:hover .menu-list {
-  opacity: 1;
-  font-size: 16px;
   color: black;
   cursor: pointer;
  display: block;
