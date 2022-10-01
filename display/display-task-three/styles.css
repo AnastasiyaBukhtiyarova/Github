@@ -11,6 +11,7 @@ div {
 display: inline-block;
 }
 .menu-button {
+  opacity: 0.8;
   position: relative;
   color: white;
   padding: 16px;
