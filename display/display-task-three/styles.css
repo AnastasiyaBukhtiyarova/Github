@@ -27,12 +27,12 @@ padding: 16px;
 }
 .menu-item {
   list-style: none;
-}
-
+  padding:16px;
+ }
 .dropdown:hover .menu-list {
   opacity: 1;
   font-size: 16px;
-  color: white;
+  color: black;
   cursor: pointer;
  display: block;
 }
