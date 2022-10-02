@@ -1,18 +1,18 @@
 
-* {
-  box-sizing: border-box;
+body {
+  margin: 16px;
 }
 .dropdown {
   display: inline-block;
   position: relative;
-  margin: 16px;
-  padding: 16px;
   background-color: darkgreen;
 color: white;
 opacity: 0.8;
+padding: 16px 0px;
 }
 
 .menu-button {
+  box-sizing: border-box;
   padding: 16px;
  
 }
@@ -40,6 +40,5 @@ padding: 0;
 .dropdown:hover .menu-list {
   color: black;
   cursor: pointer;
- font-size: 16px;
 visibility: visible;
 }
