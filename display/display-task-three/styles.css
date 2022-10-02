@@ -8,7 +8,6 @@ div {
 .dropdown {
   display: inline-block;
   position: relative;
-  top: -1px;
   background-color: darkgreen;
   color: white;
   padding: 16px 0px;
@@ -50,5 +49,5 @@ div:hover .menu-list {
 }
 div:hover {
   opacity: 1;
-    font-size: 16px;
+    font-size: 18px;
 }
