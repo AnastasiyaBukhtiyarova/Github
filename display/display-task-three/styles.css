@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 .dropdown {
   display: inline-block;
@@ -40,7 +41,6 @@ div {
 .dropdown:hover .menu-list {
   color: black;
   cursor: pointer;
- opacity: 1;
  font-size: 16px;
 visibility: visible;
 }
