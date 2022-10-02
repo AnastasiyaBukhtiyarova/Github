@@ -12,7 +12,9 @@ padding: 16px;
  opacity: 0.8;
 }
 
-
+.menu-button {
+  padding: 15px 0px;
+}
 .menu-list {
   position: absolute;
   list-style: none;
