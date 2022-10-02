@@ -2,28 +2,23 @@
 * {
   box-sizing: border-box;
 }
-div {
-  margin: 0;
-  margin: 16px;
-}
-
 .dropdown {
+  display: inline-block;
+  position: relative;
   margin: 16px;
-display: inline-block;
+  background-color: darkgreen;
+color: white;
+opacity: 0.8;
 }
 .menu-button {
-  font-size: 16px;
-  opacity: 0.8;
-  position: relative;
-  color: white;
-padding:16px ;
- background-color: darkgreen;
-
+  padding: 16px;
 }
+
 .menu-list {
   position: absolute;
-  top: 65px;
-  display: none;
+  top: 50px;
+  list-style: none;
+visibility: hidden;
   margin: 0;
   padding: 0;
   background-color: lightcyan;
@@ -33,14 +28,19 @@ padding:16px ;
   z-index: 1;
   
 }
+div {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+}
 .menu-item {
-  list-style: none;
  padding:16px;
  }
+
 .dropdown:hover .menu-list {
   color: black;
   cursor: pointer;
  opacity: 1;
  font-size: 16px;
-
+visibility: visible;
 }
