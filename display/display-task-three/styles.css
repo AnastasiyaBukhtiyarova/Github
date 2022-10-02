@@ -7,10 +7,10 @@
   position: relative;
   background-color: darkgreen;
   color: white;
-  margin:15px 16px 16px 16px;
-padding: 16px 0px;
-
-  opacity: 0.8;
+  margin:16px;
+  padding-bottom: 16px;
+  padding-top: 10px;
+ opacity: 0.8;
 }
 
 .menu-button {
