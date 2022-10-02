@@ -7,8 +7,8 @@
   position: relative;
   background-color: darkgreen;
   color: white;
-  margin:16px;
-padding-bottom: 14px;
+  margin:15px 16px 16px 16px;
+padding: 16px 0px;
 
   opacity: 0.8;
 }
