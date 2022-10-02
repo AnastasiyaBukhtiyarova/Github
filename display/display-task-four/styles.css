@@ -1,5 +1,10 @@
 
+* {
+    margin: 0;
+  padding: 0;
+}
 .text {
+
   margin: 16px;
 border-bottom: 1px dotted black;
 display:inline-block;
@@ -7,8 +12,8 @@ display:inline-block;
 .tooltip {
   visibility: hidden;
   position: absolute;
- top: 50px;
-  left: 20px;
+ top: 40px;
+  left: 16px;
   background-color: grey;
   color: white;
   border-radius: 4px;
