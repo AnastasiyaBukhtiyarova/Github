@@ -1,14 +1,14 @@
-div {
+
+.text {
   margin: 16px;
-}
-.text-one {
 border-bottom: 1px dotted black;
+display:inline-block;
 }
 .tooltip {
   visibility: hidden;
-  position: relative;
-  bottom: -40px;
-  left: -100px;
+  position: absolute;
+ top: 50px;
+  left: 20px;
   background-color: grey;
   color: white;
   border-radius: 4px;
