@@ -1,18 +1,21 @@
 
+* {
+  box-sizing: border-box;
+}
 .dropdown {
   display: inline-block;
   position: relative;
   background-color: darkgreen;
   color: white;
   margin:16px;
-padding: 16px;
+padding: 15px 16px 16px 16px;
   opacity: 0.8;
 
 }
 
 .menu-button {
-  box-sizing: border-box;
-  padding: 16px 0px;
+  
+  padding: 16px;
   
 }
 .menu-list {
