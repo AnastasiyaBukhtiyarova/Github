@@ -8,6 +8,7 @@ div {
 .dropdown {
   display: inline-block;
   position: relative;
+  top: -1px;
   background-color: darkgreen;
   color: white;
   padding: 16px 0px;
@@ -21,7 +22,7 @@ div {
 }
 .menu-list {
   position: absolute;
-  top: 49px;
+  top: 50px;
 opacity: 100%;
   list-style: none;
   visibility: hidden;
