@@ -15,6 +15,8 @@ div {
 }
 
 .menu-button {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   padding: 16px;
   
@@ -49,5 +51,5 @@ div:hover .menu-list {
 }
 div:hover {
   opacity: 1;
-    font-size: 18px;
+    font-size: 16px;
 }
