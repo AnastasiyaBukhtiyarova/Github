@@ -8,13 +8,12 @@
   background-color: darkgreen;
   color: white;
   margin:16px;
-padding: 15px 16px 16px 16px;
+padding-bottom: 15px;
+padding-top: 15px;
   opacity: 0.8;
-
 }
 
 .menu-button {
-  
   padding: 16px;
   
 }
