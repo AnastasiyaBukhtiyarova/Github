@@ -1,5 +1,5 @@
 div {
-  margin: 16px 0px;
+  margin: 16px;
 }
 .text-one {
 border-bottom: 1px dotted black;
@@ -7,12 +7,13 @@ border-bottom: 1px dotted black;
 .tooltip {
   visibility: hidden;
   position: absolute;
+  top: 25px;
   left: 5px;
-  top: 40px;
   background-color: grey;
   color: white;
   border-radius: 4px;
   padding: 8px;
+  margin: 16px;
 }
 .text:hover .tooltip {
   visibility: visible;
