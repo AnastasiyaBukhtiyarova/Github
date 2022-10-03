@@ -1,7 +1,7 @@
 section {
   padding: 0;
   margin: 0;
-  margin: 31px 32px 32px 32px;
+  margin: 32px;
   font-family: Roboto,sans-serif;
   font-size: 18px;
 }
@@ -14,9 +14,12 @@ h1 {
 
 }
 p {
+     margin: 32px;
   line-height: 28px;
+ 
 }
 .word {
+
   letter-spacing: 3px;
   font-size: 24px;
   opacity: 0.8;
