@@ -1,6 +1,7 @@
 .gallery {
   display: flex;
 box-sizing: border-box;
+overflow: hidden;
 }
 .thumb {
   margin: 8px;
