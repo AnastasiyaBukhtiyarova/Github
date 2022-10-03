@@ -1,7 +1,7 @@
 section {
   padding: 0;
   margin: 0;
-  margin: 32px;
+  margin: 31px 32px 32px 32px;
   font-family: Roboto,sans-serif;
   font-size: 18px;
 }
@@ -24,4 +24,7 @@ p {
 }
 em {
   color: grey;
+}
+a {
+  text-decoration: none;
 }
