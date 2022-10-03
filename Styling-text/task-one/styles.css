@@ -14,15 +14,14 @@ h1 {
   text-align: center;
 
 }
-p-one {
-  margin: 0;
+.p-one {
   padding-top: 1px;
    margin-top: 25px;
   line-height: 28px;
  }
- p-two {
+ .p-two {
 line-height: 28px;
-margin-top: 32px;
+
  }
 .word {
 
