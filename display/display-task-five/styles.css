@@ -1,8 +1,11 @@
 .gallery {
   display: flex;
+box-sizing: border-box;
 }
 .thumb {
   margin: 8px;
+  min-width: 300px;
+  
 }
 .gallery:hover .thumb {
   cursor: all-scroll;
