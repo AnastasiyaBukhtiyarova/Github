@@ -14,7 +14,8 @@ h1 {
 
 }
 p {
-     margin-top: 32px;
+  margin: 0;
+   margin-top: 32px;
   line-height: 28px;
  
 }
