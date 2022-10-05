@@ -1,6 +1,4 @@
-html {
-  margin: 0;
-}
+
 h1 {
   margin: 0;
   padding: 0;
@@ -17,7 +15,7 @@ p {
 * {
   font-family: Roboto, sans-serif;
   font-size: 18px;
-margin: 32px;
+
  
 }
 .word {
@@ -35,4 +33,6 @@ a {
   color: grey;
   margin: 0;
 }
-
+section {
+  margin: 32px;
+}
