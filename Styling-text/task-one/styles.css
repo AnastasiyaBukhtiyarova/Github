@@ -1,22 +1,24 @@
 h1 {
   margin: 0;
   padding: 0;
- word-spacing: 20px;
+  word-spacing: 20px;
   text-align: center;
   text-transform: uppercase;
 }
 p:last-child {
-  margin: 0;
-  padding: 0;
+
   line-height: 28px;
-  
 }
+p {
+  line-height: 28px;
+}
+
 * {
   font-family: Roboto, sans-serif;
   font-size: 18px;
 }
 .word {
- letter-spacing: 3px;
+  letter-spacing: 3px;
   font-size: 24px;
   opacity: 0.8;
   text-decoration: underline;
@@ -29,4 +31,5 @@ a {
 }
 section {
   margin: 32px;
+  
 }
