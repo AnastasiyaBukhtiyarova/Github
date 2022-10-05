@@ -8,15 +8,14 @@ h1 {
 
 p {
   line-height: 28px;
-  margin-block-start: 0;
-margin-block-end: 0;
- padding-top: 18px;
 }
 
 
 * {
   font-family: Roboto, sans-serif;
   font-size: 18px;
+margin: 32px;
+ 
 }
 .word {
   letter-spacing: 3px;
@@ -30,8 +29,4 @@ a {
 .translation {
   color: grey;
 }
-section {
-  margin: 32px;
- 
-  
-}
+
