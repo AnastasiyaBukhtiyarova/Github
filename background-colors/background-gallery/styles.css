@@ -1,7 +1,5 @@
 .gallery {
   display: flex;
-
-  height: 200px;
 }
 .image {
   margin: 16px;
