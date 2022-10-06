@@ -9,7 +9,7 @@ div {
   background-size: cover;
   font-size: 32px;
   color: white;
-  opacity:700;
+  font-weight: 700;
  padding-top: 32px;
  text-align: center;
 }
