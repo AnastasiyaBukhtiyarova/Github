@@ -1,10 +1,15 @@
+body {
+  margin-top: calc(50% - 250px);
+}
 .image {
   display: block;
   max-width: 100%;
  margin: auto;
 
 }
-
+.image-container {
+  opacity: 1;
+}
 .image-button {
   position: absolute;
   top: calc(50% - 25px);
