@@ -9,7 +9,7 @@ body {
   margin: 16px;
   padding-left: 35px;
 }
-input {
+input[type="checkbox"] {
   visibility: hidden;
   height: 0;
   width: 0;
