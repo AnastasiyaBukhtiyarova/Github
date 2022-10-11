@@ -1,0 +1,29 @@
+html {
+  margin: 8px;
+}
+.checkbox {
+  position: relative;
+  font-size: 24px;
+  margin: 16px;
+  padding-left: 35px;
+ 
+}
+input {
+ visibility: hidden;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  height:25px;
+  width: 25px;
+  background-color: #d3d3d3;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+  
+}
+.checkbox:hover .checkmark {
+  background-color: #006400;
+}
