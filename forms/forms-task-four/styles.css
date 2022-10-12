@@ -11,22 +11,41 @@ font-size: 16px;
 font-family: monospace;
 box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2) ;
 }
+
 .form-title {
   text-transform: uppercase;
   text-align: center;
  align-items: center;
 }
 .form-input {
+padding: 0;
   box-sizing: border-box;
   height: 32px;
   border-radius: 4px;
-  border: 1px solid #808080;
 outline: 0px;
-  margin-bottom: 8px;
   width: 268px;
     
 }
-
+form > div:nth-of-type(1){
+ margin-bottom: 8px;
+  
+}
+div:nth-of-type(2) {
+  margin-bottom: 8px;
+}
+div:nth-of-type(3) {
+  margin-bottom: 8px;
+}
+.form-control {
+  box-sizing: border-box;
+  margin: 0;
+}
+input[type="email"] {
+   border:3px solid #ff0000;
+}
+input[type="password"] {
+   border:3px solid #ff0000;
+}
 .login-form {
   box-sizing: border-box;
   padding: 16px;
