@@ -2,15 +2,11 @@
   margin: 32px;
   box-sizing: border-box;
 }
-input {
+.form {
+  box-sizing: border-box;
   margin: 8px;
 }
-textarea {
-  margin: 8px;
-}
-select {
-  margin: 8px;
-}
-button {
+.languages {
+  box-sizing: border-box;
   margin: 8px;
 }
