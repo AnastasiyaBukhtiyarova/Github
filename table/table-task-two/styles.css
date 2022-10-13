@@ -1,15 +1,13 @@
 table {
   width: 500px;
   margin: 16px;
-  box-sizing: border-box;
+  
 }
-tbody {
-   box-sizing: border-box;
-}
+
 td, th {
   padding: 4px;
   text-align: right;
-  box-sizing: border-box;
+  
 }
 table, td, th {
   border: 1px solid black;
@@ -17,12 +15,9 @@ table, td, th {
 }
 div {
   overflow-x: auto;
-   box-sizing: border-box;
+  
 }
-tr {
-  line-height:  40px ;
-   box-sizing: border-box;
-}
+
 tbody > tr:nth-child(odd) {
 background-color: #f2f2f2;
 }
@@ -33,7 +28,7 @@ tbody > tr:hover {
 }
 thead {
   background-color:aqua ;
-   box-sizing: border-box;
+  
 }
 tfoot {
   font-weight: 700;
