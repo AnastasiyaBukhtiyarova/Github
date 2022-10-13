@@ -57,8 +57,6 @@ padding: 4px;
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 4px;
- border-bottom: 2px solid rgb(0,0, 0);
- border-right: 2px solid rgb(0,0, 0);
  border-top: 2px solid rgb(118,118,118);
  border-left: 2px solid rgb(118,118,118); ;
 }
