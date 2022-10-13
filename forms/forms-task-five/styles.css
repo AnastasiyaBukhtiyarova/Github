@@ -2,11 +2,7 @@
   margin: 32px;
   box-sizing: border-box;
 }
-.form {
-  box-sizing: border-box;
-  margin: 8px;
-}
-.languages {
+div {
   box-sizing: border-box;
   margin: 8px;
 }
