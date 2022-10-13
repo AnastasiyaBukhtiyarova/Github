@@ -13,7 +13,7 @@ background-color: bisque;
 }
 .page {
   position: absolute;
-  top: calc(50% - 116.195px);
+  top: calc(50% - 173.422px);
   left: calc(50% - 150px);
 }
 .form-title {
@@ -24,13 +24,12 @@ line-height: 36.797px;
 
 .form-input {
   box-sizing: border-box;
-  width: 258px;
+  width: 268px;
   padding: 0;
 padding: 4px;
   margin: 0;
   height: 32px;
   border-radius: 4px;
-  border: 1px solid #808080;
   outline: none;
 }
 .form-input[type="email"] {
@@ -38,6 +37,9 @@ padding: 4px;
 }
 .form-input[type="password"] {
   border:3px solid #ff0000;
+}
+.form-input[type="text"] {
+  border: 1px solid #808080;
 }
 .form-control {
  
@@ -55,7 +57,7 @@ padding: 4px;
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 4px;
- 
+ border:3px solid rgb(118,118,118);
 }
 
 
