@@ -15,4 +15,5 @@ table, td {
 }
 th {
   text-align: right;
+  border-collapse: collapse;
 }
