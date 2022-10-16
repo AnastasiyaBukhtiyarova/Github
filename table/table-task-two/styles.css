@@ -1,8 +1,11 @@
 table {
   width: 500px;
   margin: 16px;
-  line-height: 40px;
   
+  
+}
+tbody {
+  line-height: 40px;
 }
 
 td, th {
@@ -29,10 +32,12 @@ tbody > tr:hover {
 }
 thead {
   background-color:aqua ;
+  line-height: 40px;
   
 }
 tfoot {
   font-weight: 700;
+  line-height: 40px;
 }
 caption {
   margin-bottom: 8px;
