@@ -7,9 +7,7 @@ table {
   
   
 }
-tr {
-  line-height: 40px;
-}
+
 tbody {
   line-height: 40px;
   
@@ -39,7 +37,7 @@ tbody > tr:hover {
 }
 thead {
   text-align: right;
- 
+ line-height: 30px;
   background-color:aqua ;
 
   
