@@ -7,6 +7,9 @@ table {
   
   
 }
+tr {
+  line-height: 40px;
+}
 tbody {
   line-height: 40px;
   
@@ -38,7 +41,7 @@ thead {
   text-align: right;
  
   background-color:aqua ;
-  line-height: 40px;
+
   
 }
 tfoot {
