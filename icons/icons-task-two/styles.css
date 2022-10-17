@@ -26,9 +26,3 @@ fill: white;
 .bird-icon:hover {
  fill: green;
 }
-.id-card {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  fill: white;
-}
