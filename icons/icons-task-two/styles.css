@@ -12,6 +12,7 @@
   font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   cursor: pointer;
+line-height: 50px;
 }
 .button:hover {
   color: darkcyan;
