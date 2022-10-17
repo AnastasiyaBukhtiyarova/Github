@@ -26,3 +26,6 @@ fill: white;
 .bird-icon:hover {
  fill: green;
 }
+i {
+  border-radius: unset;
+}
