@@ -31,6 +31,7 @@ body {
   padding: 0.5em;
 }
 .header {
+  line-height: 74px;
 }
 h1 {
   background-image: linear-gradient(60deg, red, orange);
