@@ -21,14 +21,16 @@ body {
 .navigation {
   box-sizing: border-box;
   width: 20%;
- 
+  padding: 0.5em;
 }
 .section {
-  width: 60%;
   padding: 0.5em;
+  box-sizing: border-box;
+  width: 60%;
   font-size: 1.25em;
 }
 .news {
+  box-sizing: border-box;
   width: 20%;
   padding: 0.5em;
 }
@@ -48,28 +50,31 @@ h1 {
   text-align: center;
 }
 .units-list {
- padding-left: 0.5em;
+  box-sizing: border-box;
+  padding-left: 0.5em;
   padding-right: 0;
   line-height: 1.75em;
   list-style-type: disc;
 }
 .css-units {
+  box-sizing: border-box;
   color: #8b0000;
   background-color: #e5e5e5;
   font-weight: 700;
   font-size: 1.125em;
- list-style-type: disc;
-  
+  list-style-type: disc;
+  line-height: 1.75em;
 }
 .section__header {
-  font-size: calc( 5 * 100vw / 100);
+  box-sizing: border-box;
+  font-size: calc(5 * 100vw / 100);
   text-align: center;
 }
 
 .nav-list-item {
-  padding-top: 1px;
-  margin-top: 0.5em;
-  padding: 0 0.5em;
+
+ 
+  padding:0 0.5em;
   box-sizing: border-box;
   color: white;
   background-color: #808080;
@@ -84,10 +89,11 @@ h1 {
   box-sizing: border-box;
   color: white;
   text-decoration: none;
+  
 }
 .nav-list {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   margin-bottom: 0.5em;
-  margin: 0;
-  padding: 0;
 }
