@@ -24,7 +24,8 @@ body {
   box-sizing: border-box;
   width: 60%;
   font-size: 1.25em;
-}.news {
+}
+.news {
   box-sizing: border-box;
   width: 20%;
   padding: 0.5em;
@@ -61,9 +62,8 @@ h1 {
   text-align: center;
 }
 .nav-list-item {
-  padding-top: 1px;
   padding: 0 0.5em;
-  margin-top: 1px;
+  padding-top: 1px;
   color: white;
   background-color: #808080;
   line-height: 2em;
@@ -78,7 +78,7 @@ h1 {
   text-decoration: none;
 }
 .nav-list {
- padding-top: 1px;
   padding: 0;
+  margin-top: 1px;
   margin-bottom: 0.5em;
 }
