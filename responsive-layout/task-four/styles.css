@@ -78,7 +78,7 @@ h1 {
   text-decoration: none;
 }
 .nav-list {
-  margin-top: 1px;
+ padding-top: 1px;
   padding: 0;
   margin-bottom: 0.5em;
 }
