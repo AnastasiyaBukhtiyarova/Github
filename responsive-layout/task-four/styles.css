@@ -48,14 +48,18 @@ h1 {
   text-align: center;
 }
 .units-list {
-  padding:0;
+ padding-left: 0.5em;
+  padding-right: 0;
   line-height: 1.75em;
+  list-style: circle;
 }
 .css-units {
   color: #8b0000;
   background-color: #e5e5e5;
   font-weight: 700;
   font-size: 1.125em;
+ 
+  
 }
 .section__header {
   font-size: calc( 5 * 100vw / 100);
