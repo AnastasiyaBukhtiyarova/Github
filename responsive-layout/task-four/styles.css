@@ -18,14 +18,14 @@ body {
   display: flex;
   flex: 1 1 auto;
   box-sizing: border-box;
-  padding-top: 1px;
+ 
 }
 
 .navigation {
   box-sizing: border-box;
   width: 20%;
   padding: 0.5em;
-  margin-top: 19.92px;
+ 
 }
 .section {
   padding: 0.5em;
@@ -55,10 +55,8 @@ h1 {
 }
 .units-list {
   box-sizing: border-box;
-  padding-left: 0.5em;
-  padding-right: 0;
   line-height: 1.75em;
-  list-style-type: disc;
+  
 }
 .css-units {
   box-sizing: border-box;
@@ -73,6 +71,7 @@ h1 {
   box-sizing: border-box;
   font-size: calc(5 * 100vw / 100);
   text-align: center;
+  line-height: 200%;
 }
 
 .nav-list-item {
@@ -95,7 +94,6 @@ h1 {
 }
 .nav-list {
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
   margin-bottom: 0.5em;
 }
