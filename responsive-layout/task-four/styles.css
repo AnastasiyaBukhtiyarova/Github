@@ -63,7 +63,7 @@ h1 {
 }
 .nav-list-item {
   padding: 0 0.5em;
-  padding-top: 1px;
+margin-top: 1px;
   color: white;
   background-color: #808080;
   line-height: 2em;
