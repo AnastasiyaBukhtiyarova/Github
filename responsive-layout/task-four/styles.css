@@ -59,7 +59,6 @@ h1 {
   
 }
 .css-units {
-  box-sizing: border-box;
   color: #8b0000;
   background-color: #e5e5e5;
   font-weight: 700;
@@ -71,13 +70,12 @@ h1 {
   box-sizing: border-box;
   font-size: calc(5 * 100vw / 100);
   text-align: center;
-  line-height: 200%;
+  
 }
 
 .nav-list-item {
   padding: 0 0.5em;
   margin-top: 1px;
-  box-sizing: border-box;
   color: white;
   background-color: #808080;
   line-height: 2em;
@@ -88,12 +86,11 @@ h1 {
   text-overflow: ellipsis;
 }
 .nav-list-link {
-  box-sizing: border-box;
   color: white;
   text-decoration: none;
 }
 .nav-list {
   padding: 0;
-  box-sizing: border-box;
+ 
   margin-bottom: 0.5em;
 }
