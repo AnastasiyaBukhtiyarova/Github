@@ -51,14 +51,14 @@ h1 {
  padding-left: 0.5em;
   padding-right: 0;
   line-height: 1.75em;
-  list-style: circle;
+  list-style-type: disc;
 }
 .css-units {
   color: #8b0000;
   background-color: #e5e5e5;
   font-weight: 700;
   font-size: 1.125em;
- 
+ list-style-type: disc;
   
 }
 .section__header {
