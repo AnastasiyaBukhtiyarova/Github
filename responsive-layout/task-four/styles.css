@@ -4,19 +4,16 @@ html {
   color: #555;
   height: 100%;
 }
-
 body {
   height: 100%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .main {
   display: flex;
   flex: 1 1 auto;
 }
-
 .navigation {
   box-sizing: border-box;
   width: 20%;
@@ -27,8 +24,7 @@ body {
   box-sizing: border-box;
   width: 60%;
   font-size: 1.25em;
-}
-.news {
+}.news {
   box-sizing: border-box;
   width: 20%;
   padding: 0.5em;
@@ -64,7 +60,6 @@ h1 {
   font-size: calc(5 * 100vw / 100);
   text-align: center;
 }
-
 .nav-list-item {
   padding-top: 1px;
   padding: 0 0.5em;
