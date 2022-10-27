@@ -25,12 +25,10 @@ body {
 }
 .section {
   padding: 0.5em;
-  box-sizing: border-box;
   width: 60%;
   font-size: 1.25em;
 }
 .news {
-  box-sizing: border-box;
   width: 20%;
   padding: 0.5em;
 }
@@ -40,7 +38,6 @@ h1 {
   padding: 0;
   color: #ffffff;
   text-align: center;
-  line-height: 79px;
 }
 .footer {
   background-color: #e5e5e5;
@@ -53,7 +50,6 @@ h1 {
   background-color: #e5e5e5;
   font-weight: 700;
   font-size: 1.125em;
-  list-style-type: disc;
   line-height: 1.75em;
 }
 .section__header {
@@ -65,7 +61,6 @@ h1 {
   color: white;
   background-color: #808080;
   line-height: 2em;
-  list-style: none;
   margin-bottom: 0.5em;
   white-space: nowrap;
   overflow: hidden;
