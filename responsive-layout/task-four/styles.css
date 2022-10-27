@@ -1,10 +1,12 @@
 html {
+  box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: #555;
   height: 100%;
 }
 body {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   height: 100%;
@@ -13,6 +15,7 @@ body {
   flex-direction: column;
 }
 .main {
+  box-sizing: border-box;
   display: flex;
   flex: 1 1 auto;
 }
@@ -49,6 +52,7 @@ h1 {
   box-sizing: border-box;
 }
 .css-units {
+  box-sizing: border-box;
   color: #8b0000;
   background-color: #e5e5e5;
   font-weight: 700;
@@ -57,13 +61,12 @@ h1 {
   line-height: 1.75em;
 }
 .section__header {
-  padding-top: 2px;
   box-sizing: border-box;
   font-size: calc(5 * 100vw / 100);
   text-align: center;
-  line-height: 100%;
 }
 .nav-list-item {
+  box-sizing: border-box;
   padding: 0 0.5em;
   color: white;
   background-color: #808080;
@@ -79,6 +82,7 @@ h1 {
   text-decoration: none;
 }
 .nav-list {
+  box-sizing: border-box;
   padding: 0;
   margin-bottom: 0.5em;
 }
