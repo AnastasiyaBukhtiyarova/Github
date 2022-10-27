@@ -64,10 +64,9 @@ h1 {
 }
 .nav-list-item {
   padding: 0 0.5em;
-  padding-top: 1px;
   color: white;
   background-color: #808080;
-  line-height: 2em;
+  line-height: 1.99em;
   list-style: none;
   margin-bottom: 0.5em;
   white-space: nowrap;
@@ -79,9 +78,6 @@ h1 {
   text-decoration: none;
 }
 .nav-list {
-  height: 113px;
-  box-sizing: border-box;
   padding: 0;
-  padding-top: 1px;
   margin-bottom: 0.5em;
 }
