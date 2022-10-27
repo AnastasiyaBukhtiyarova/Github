@@ -1,12 +1,13 @@
-html {
+* {
   box-sizing: border-box;
+}
+html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: #555;
   height: 100%;
 }
 body {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   height: 100%;
@@ -15,12 +16,10 @@ body {
   flex-direction: column;
 }
 .main {
-  box-sizing: border-box;
   display: flex;
   flex: 1 1 auto;
 }
 .navigation {
-  box-sizing: border-box;
   width: 20%;
   padding: 0.5em;
 }
@@ -48,11 +47,8 @@ h1 {
   padding: 0.5em;
   text-align: center;
 }
-.units-list {
-  box-sizing: border-box;
-}
+
 .css-units {
-  box-sizing: border-box;
   color: #8b0000;
   background-color: #e5e5e5;
   font-weight: 700;
@@ -61,16 +57,14 @@ h1 {
   line-height: 1.75em;
 }
 .section__header {
-  box-sizing: border-box;
   font-size: calc(5 * 100vw / 100);
   text-align: center;
 }
 .nav-list-item {
-  box-sizing: border-box;
   padding: 0 0.5em;
   color: white;
   background-color: #808080;
-  line-height: 1.99em;
+  line-height: 2em;
   list-style: none;
   margin-bottom: 0.5em;
   white-space: nowrap;
@@ -82,7 +76,6 @@ h1 {
   text-decoration: none;
 }
 .nav-list {
-  box-sizing: border-box;
   padding: 0;
   margin-bottom: 0.5em;
 }
