@@ -92,6 +92,9 @@ img {
   .section {
     margin-top: 0.5em;
   }
+  .footer {
+    padding-bottom:0.6em ;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 1199px) {
   .main {
