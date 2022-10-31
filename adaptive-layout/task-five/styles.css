@@ -99,6 +99,9 @@ img {
   .footer {
     padding-bottom: 0;
   }
+  .news {
+    padding-bottom: 0;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 1199px) {
   .main {
