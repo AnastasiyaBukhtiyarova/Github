@@ -111,9 +111,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  * {
-    box-sizing: border-box;
-  }
+  
   .main,
   .container {
     display: flex;
