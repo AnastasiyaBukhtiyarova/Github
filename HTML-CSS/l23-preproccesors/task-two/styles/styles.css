@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  margin: 8px;
+  background-color: #ff7f50;
+}
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .square {
+    background-color: #8a2be2;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .square {
+    background-color: #a61;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .square {
+    background-color: #c47;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (orientation: portrait) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
