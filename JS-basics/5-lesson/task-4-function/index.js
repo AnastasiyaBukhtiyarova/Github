@@ -3,17 +3,16 @@
  * @param {number} secondNumber
  * @return {number}
  */
-function min(firstNumber, secondNumber) {
-  // put your code here
-  if (firstNumber < secondNumber) {
-    return (firstNumber);
-  } else {
-    return (secondNumber);
- }
-}
-console.log(min(100,40));
-console.log(min(30, 50));
 
+function min(firstNumber, secondNumber) {
+  if (firstNumber < secondNumber) {
+    return firstNumber;
+  } else {
+    return secondNumber;
+  }
+}
+console.log(min(0, -2));
+console.log(min(5,3));
 /** 2й способ решения
  * @param {number} firstNumber
  * @param {number} secondNumber
@@ -27,7 +26,7 @@ function min(firstNumber, secondNumber) {
   } else {
     min = secondNumber;
   }
-  return (min);
+  return min;
 }
-console.log(min(100,40));
+console.log(min(100, 40));
 console.log(min(30, 50));
