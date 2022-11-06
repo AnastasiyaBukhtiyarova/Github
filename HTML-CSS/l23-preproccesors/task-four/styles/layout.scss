@@ -16,18 +16,15 @@ $tablet: 900px;
   }
 }
 @mixin destkop {
-@media screen and (min-width: 900px) {
-  .page {
-    display: flex;
+  @media screen and (min-width: 900px) {
+    .page {
+      display: flex;
+    }
+    .navigation,
+    .products-list,
+    .news {
+      width: calc(100vw * 33.33 / 100);
+    }
+   
   }
-  .navigation {
-    width: calc(100vw * 33.33 / 100);
-  }
-  .products-list {
-    width: calc(100vw * 33.33 / 100);
-  }
-  .news {
-    width: calc(100vw * 33.33 / 100);
-  }
-}
 }
