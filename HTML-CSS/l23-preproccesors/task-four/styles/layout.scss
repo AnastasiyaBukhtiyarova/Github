@@ -1,0 +1,30 @@
+$unit: 4px;
+$phone: 600px;
+$tablet: 900px;
+
+@mixin layout {
+  min-height: 200px;
+  display: flex;
+  flex: 1;
+}
+@mixin tablet {
+  @media screen and (min-width: $phone) {
+    .container {
+      display: flex;
+      flex: 2;
+    }
+  }
+}
+@mixin destkop {
+  @media screen and (min-width: 900px) {
+    .page {
+      display: flex;
+    }
+    .navigation,
+    .products-list,
+    .news {
+      width: calc(100vw * 33.33 / 100);
+    }
+   
+  }
+}
