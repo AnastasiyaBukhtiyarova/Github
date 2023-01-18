@@ -1,10 +1,19 @@
-// put your code here
-function getEvenOdd(num) {
-  if (num % 2 === 0) {
-    return 'odd';
-  }else {
-    return 'even';
-  }
-}
+'use strict';
 
-console.log(getEvenOdd(18));
+/**
+ * @param {number} from
+ * @param {number} to
+ * @return {number[]}
+ */
+function getSpecialNumbers(from, to) {
+  // put your code here
+  let arr = [];
+  for (let i = from; i <= to; i++) {
+    if (i % 3 === 0) {
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+const res = getSpecialNumbers;
+console.log(getSpecialNumbers(1, 10));
