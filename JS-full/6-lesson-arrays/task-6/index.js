@@ -1,9 +1,14 @@
-function getSum(firstNum, secondNum) {
-  let result = 0;
-  for (let i = firstNum; i <= secondNum; i += 1) {
-    if (i % 2 === 0) result += i;
+const arr = [0, 5, 6, 10, 40, 50, 60];
+// const arr = 8;
+function squareArray(num) {
+  const res = [];
+  if (!Array.isArray(num)) {
+    return null;
   }
-  return result;
+ for (const i of num) {
+    res.push(i * i);
+  }
+  return res;
 }
-
-console.log(getSum(1, 8));
+const b = squareArray;
+console.log(b(arr));

@@ -19,13 +19,13 @@ module.exports = {
     'import/no-dynamic-require': 0,
     'import/prefer-default-export': 0,
     'prefer-template': 0,
-    'string': 'single',
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
     'prettier/prettier': [
       'warn',
       {
         endOfLine: 'auto',
       },
     ],
-   
   },
 };
