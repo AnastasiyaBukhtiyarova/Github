@@ -1,5 +1,6 @@
 module.exports = {
-  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  extends: ['airbnb-base', 'prettier'],
+  parser: 'babel-eslint',
   env: {
     es6: true,
     jest: true,
@@ -19,8 +20,8 @@ module.exports = {
     'import/no-dynamic-require': 0,
     'import/prefer-default-export': 0,
     'prefer-template': 0,
-    "arrow-body-style": "off",
-    "prefer-arrow-callback": "off",
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
     'prettier/prettier': [
       'warn',
       {
