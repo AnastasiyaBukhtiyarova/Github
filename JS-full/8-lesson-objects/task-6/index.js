@@ -6,27 +6,27 @@
  * */
 
 const pickProps = (obj, props) => {
-  
-  let res = {};
-  for (let keys in obj) {
-    return keys;
+  let filtered = {};
+
+  for (let i = 0; i < props.length; i++) {
+    let item = obj[props[i]];
+    if (item) filtered[props[i]] = item;
   }
-  return res;
+
+  return filtered;
 };
 const user = {
   name: 'Ana',
   age: 25,
   favColor: 'orange',
   favAnimal: 'cat',
-  favFood: 'desserts',
+  favFood: 'pizza',
   favDrink: 'tea',
   hobby: 'sport',
   car: 'rolls roys',
-  cartoon: 'shreck',
+  cartoon: 'pussy in boots',
   music: 'cello',
   series: 'Wednesday',
 };
 const arr = ['favDrink', 'music', 'favFood'];
-const newArr = arr.split(' ');
-console.log(newArr);
-pickProps(user, arr);
+console.log(pickProps(user, arr));
