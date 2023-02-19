@@ -1,22 +1,15 @@
-const getAdults = (obj) => {
+const getTotalRevenue = (transactions) => {
   // put your code here
-  const filtered = {};
-  for (const values in obj) {
-    if (obj[values] >= 18) filtered[values] = obj[values];
-  }
-  return filtered;
+  return Object.values(transactions)
+    .reduce((acc, el) => acc.concat(el), [])
+    .map((el) => el.amount)
+    .reduce((acc, el) => acc + el);
 };
-const users = {
-  JohnDoe: 19,
-  Tom: 17,
-  Bob: 18,
-  Sam: 21,
-  N: 15,
-  Li: 30,
-};
-const empty = {};
 
-console.log(getAdults(users));
-console.log(getAdults(empty));
-console.log(getAdults({ 'John Doe': 19, Tom: 17, Bob: 18 })); // ==> { 'John Doe': 19, Bob: 18 }
-console.log(getAdults({ Ann: 56, Andrey: 7 })); // ==> { Ann: 56 }
+// examples
+const dayTransactions = [
+  { userId: 22, amount: 60, operation: 'sell' },
+  { userId: 22, amount: 160, operation: 'buy' },
+  { userId: 44, amount: 90, operation: 'sell' },
+];
+console.log(getTotalRevenue(dayTransactions));
