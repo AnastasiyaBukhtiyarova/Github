@@ -1,30 +1,18 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable no-restricted-syntax */
-
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
- * */
-
-const concatProps = (obj) => {
-  // put your code here
-  let toArr = [];
-  for (const value in obj) {
-    toArr = toArr.concat(obj[value]);
-  }
-  return toArr;
+const getParsedIntegers = (arr) => {
+  return arr.map((el) => Number.parseInt(el));
 };
-
-const usersProfile = {
-  name: 'Ed',
-  age: 26,
-  interests: 'books',
-  job: 'ruby dev',
-  sex: 'male',
-  country: 'ukrainian',
-  birthday: '11.04.1996',
+const arr = [0, 25.6, 3.65898, 8, 5.0532, 659.58745];
+console.log(getParsedIntegers(arr));
+const getParsedIntegersV2 = (arr) => {
+  return arr.map((el) => parseInt(el));
 };
-const toArr = concatProps(usersProfile);
-console.log(toArr);
-/* examples
-concatProps({ name: 'John Doe', age: 17, interest: 'football' }); // ==> ['John Doe', 17, 'football'] */
+const arr1 = [0.15, 25.1, 89, 546897496, 60.5696];
+console.log(getParsedIntegersV2(arr1));
+const getParsedFloats = (arr) => {
+  return arr.map((el) => Number.parseFloat(el));
+};
+console.log(getParsedFloats(arr1));
+const getParsedFloatsV2 = (arr) => {
+  return arr.map((el) => parseFloat(el));
+};
+console.log(getParsedFloatsV2(arr1));
