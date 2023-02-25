@@ -1,32 +1,21 @@
-/* eslint-disable no-restricted-syntax */
+'use strict';
 
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
- * */
+/**
+ * @param {number} length
+ * @param {number} from
+ * @param {number} to
+ * @return {number[]}
+ */
 
-const pickProps = (obj, props) => {
-  let filtered = {};
-
-  for (let i = 0; i < props.length; i++) {
-    let item = obj[props[i]];
-    if (item) filtered[props[i]] = item;
-  }
-
-  return filtered;
+const getRandomNumbers = (length, from, to) => {
+  // put your code here
+  if (from > to || Math.ceil(to) === Math.ceil(from)) return null;
+  let floor = Math.floor(to);
+  let ceil = Math.ceil(from);
+  return Array(length)
+    .fill()
+    .map((el) => Math.round(Math.random() * (floor - ceil) + ceil));
 };
-const user = {
-  name: 'Ana',
-  age: 25,
-  favColor: 'orange',
-  favAnimal: 'cat',
-  favFood: 'pizza',
-  favDrink: 'tea',
-  hobby: 'sport',
-  car: 'rolls roys',
-  cartoon: 'pussy in boots',
-  music: 'cello',
-  series: 'Wednesday',
-};
-const arr = ['favDrink', 'music', 'favFood'];
-console.log(pickProps(user, arr));
+
+console.log(getRandomNumbers(3, 2.4, 4.5));
+console.log(getRandomNumbers(7, 1.4, 1.9));

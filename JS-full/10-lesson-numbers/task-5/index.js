@@ -1,19 +1,7 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable guard-for-in */
-
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
- * */
-
-function getKeys(obj) {
-  // put you code here
-  for (let nameKeys in obj) {
-    console.log(nameKeys);
-  }
-}
-const obj1 = {
-  name: 'Ana',
-  age: 26,
+const getTotalPrice = (arr) => {
+  const sum = arr.reduce((el, acc) => el + acc);
+  return '$' + Math.floor(sum * 100) / 100;
 };
-getKeys(obj1);
+const arr = [8, 5, -3, 0.63215555544485, 659.3265448, 25];
+const totalPrice = getTotalPrice(arr);
+console.log(totalPrice);
