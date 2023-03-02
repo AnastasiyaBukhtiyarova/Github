@@ -1,6 +1,7 @@
-//export default
-const getS = (num) => {
- return num*num;
- 
+export default (num) => {
+  if (!Array.isArray(num)) return null;
+  const square = num.map((el) => {
+    return el * el;
+  });
+  return Math.min(...square);
 };
-console.log(getS([-1, 5, 3]));
