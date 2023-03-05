@@ -1,6 +1,5 @@
-const withdraw = (clients, balances, client, amount) => {
+export const withdraw = (clients, balances, client, amount) => {
   const index = clients.indexOf(client);
-  console.log(clients.indexOf(client));
   if (balances[index] < amount) {
     return -1;
   }

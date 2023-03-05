@@ -1,4 +1,4 @@
-const getAdults = (obj) => {
+export const getAdults = (obj) => {
   // put your code here
   const filtered = {};
   for (const values in obj) {
