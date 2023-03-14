@@ -23,13 +23,10 @@ export function createLogger() {
         type: 'log',
       });
     },
-    getRecords: function (str) {
-      if (!str) {
-        return logger;
-      }
-      return logger
-        .filter((i) => i.type === str)
-        .sort((a, b) => b.dateTime.getTime() - a.dateTime.getTime());
+    getRecords(str) {
+      return (str ? logger.filter((i) => i.type === str) : logger).sort(
+        (a, b) => b.dateTime.getTime() - a.dateTime.getTime()
+      );
     },
   };
 }
