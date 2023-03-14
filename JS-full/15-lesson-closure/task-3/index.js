@@ -1,23 +1,22 @@
-//export
-  function createLogger() {
+export function createLogger() {
   let logger = [];
 
   return {
-    warn: function (str) {
+    warn(str) {
       logger.push({
         message: str,
         dateTime: new Date(),
         type: 'warn',
       });
     },
-    error: function (str) {
+    error(str) {
       logger.push({
         message: str,
         dateTime: new Date(),
         type: 'error',
       });
     },
-    log: function (str) {
+    log(str) {
       logger.push({
         message: str,
         dateTime: new Date(),
@@ -29,6 +28,7 @@
         return logger;
       }
       return logger
+        .filter((i) => i.type === str)
         .sort((a, b) => b.dateTime.getTime() - a.dateTime.getTime());
     },
   };
@@ -45,7 +45,7 @@ console.log(logger1.getRecords()); // ===> [{ message: 'Unexpected error on the 
 logger1.getRecords('log'); // ===> [{ message: 'User logged out', type: 'log', dateTime: Date }, { message: 'User logged in', type: 'log', dateTime: Date }]
 logger1.getRecords('error'); // ===> [{ message: 'Unexpected error on the site', type: 'error', dateTime: Date }]
 logger1.getRecords('warn'); // ===> [{ message: 'User is tring to ented restricted page', type: 'warn', dateTime: Date }]
-
+console.log(logger1.getRecords());
 const logger2 = createLogger();
 logger2.warn('Opps, something is happenning');
 logger2.getRecords('error'); // ===> []
