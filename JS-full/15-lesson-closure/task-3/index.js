@@ -1,4 +1,5 @@
-function createLogger() {
+//export
+  function createLogger() {
   let logger = [];
 
   return {
@@ -28,7 +29,6 @@ function createLogger() {
         return logger;
       }
       return logger
-        .filter((i) => i.type === str)
         .sort((a, b) => b.dateTime.getTime() - a.dateTime.getTime());
     },
   };
