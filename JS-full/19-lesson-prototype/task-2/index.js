@@ -1,13 +1,19 @@
-const wallet = {
-  transactions: [1, 5, 9, 3, -1],
-  getMax() {
-    return Math.max.apply(null, this.transactions);
-  },
-  getMin() {
-    return Math.min.apply(null, this.transactions);
+const getOwnProps = (obj) => {
+  for (let properties in obj) {
+    if (obj.hasOwnProperties(properties)) {
+      return properties;
+    }
+  }
+};
+const user1 = {
+  cat() {
+    console.log(`${this.name} is a good cat`);
   },
 };
-
-console.log(wallet.getMax());
-console.log(wallet.getMin());
-export { wallet };
+const user = {
+  name: 'Tom',
+  age: 20,
+};
+Object.setPrototypeOf(user, user1);
+getOwnProps(user.cat());
+console.log(getOwnProps(user1));
