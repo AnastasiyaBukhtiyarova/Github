@@ -1,33 +1,32 @@
 'use strict';
-function getOwnProps(obj) {
-  let arrOfKeys = [];
-  for (let keys in obj) {
-    if (obj.hasOwnProperty(keys) && typeof obj[keys] != 'function')
-      arrOfKeys.push(keys);
-  }
-  return arrOfKeys;
-}
 
-const vehicle = {
+class Vehicle {
+  constructor(name, numberOfWheels) {
+    this.name = name;
+    this.numberOfWheels = numberOfWheels;
+  }
   move() {
     console.log(`${this.name} is moving`);
-  },
+  }
   stop() {
     console.log(`${this.name} stopped`);
-  },
-};
-const ship = {
-  name: 'Argo',
-  age: 17,
-  startMachine() {
+  }
+}
+class Ship extends Vehicle {
+  constructor(name, MaxSpeed) {
+    super(name, false);
+    this.MaxSpeed = MaxSpeed;
+  }
+
+  move() {
     console.log(`${this.name} lifting anchor up`);
-    ship.move();
-  },
-  stopMachine() {
+    super.move();
+  }
+  stop() {
     console.log(`${this.name} lifting anchor down`);
-    ship.stop();
-  },
-};
-Object.setPrototypeOf(ship, vehicle);
-console.log(getOwnProps(ship));
-export { getOwnProps };
+    super.stop();
+  }
+}
+const ship = new Ship('Aurora', 1000);
+ship.move();
+export { Vehicle, Ship };
