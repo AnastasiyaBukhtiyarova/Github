@@ -1,11 +1,11 @@
-//export
-let arr = [];
-function createArrayOfFunctions(num) {
-  for (let i = 0; i < 10; i += 1) {
-    arr[i] = arr.push(function () {
+export function createArrayOfFunctions(num) {
+  var arr = [];
+  if (num === undefined) return [];
+  if (typeof num !== 'number') return null;
+  for (let i = 0; i < num; i++) {
+    arr[i] = function () {
       return i;
-    };)
+    };
   }
+  return arr;
 }
-
-console.log(createArrayOfFunctions(9));
