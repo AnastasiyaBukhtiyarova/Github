@@ -1,36 +1,31 @@
 'use strict';
 
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+const tasks = [
+  { text: 'Buy milk', done: false },
+  { text: 'Pick up Tom from airport', done: false },
+  { text: 'Visit party', done: false },
+  { text: 'Visit doctor', done: true },
+  { text: 'Buy meat', done: true },
+];
 
-  sayHi() {
-    console.log(`Hi, I am ${this.name}`);
-  }
-  requestNewPhoto() {
-    console.log(`New photo request was sent for ${this.name}`);
-  }
-  setAge(age) {
-    if (this.age >= 25) {
-      return `New photo request was sent for ${this.name}`;
-    }
-    if (this.age < 0) {
-      return false;
-    }
-    if (this.age > 0 && this.age < 25) return this.age;
-  }
-  static createEmpty(name, age) {
-    return new User('', null);
-  }
-}
-const user0 = new User('Mavka', -1);
-const user1 = new User('Mavka', 25);
-const user2 = new User('Mavka', 16);
-console.log(User.createEmpty());
-console.log(User.setAge);
-console.log(User.setAge);
-console.log(User.setAge);
+/**
+ * @param {object[]} tasksList
+ * @return {undefined}
+ */
+const renderTasks = (tasksList) => {
+  // put your code here
+  const listElem = document.querySelector('.list');
+  const listItemsElem = tasksList.map((itemText) => {
+    const listItemElem = document.createElement('li');
+    listItemElem.classList.add('list__item');
+    const checkboxElem = document.createElement('input');
+    checkboxElem.setAttribute('type', 'checkbox');
+    checkboxElem.classList.add('list__item-checkbox');
+    listItemElem.append(checkboxElem, itemText);
 
-export { User };
+    return listItemElem;
+  });
+  return listElem.append(...listItemsElem);
+};
+console.log(renderTasks(tasks));
+export { tasks };
