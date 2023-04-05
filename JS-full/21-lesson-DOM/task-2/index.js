@@ -7,7 +7,6 @@ const getTitleElement = () => {
 };
 const getInputElement = () => {
   const inputElem = document.querySelector('.task-input');
-  inputElem.getAttribute('type', 'text');
   console.dir(inputElem);
   return inputElem;
 };
