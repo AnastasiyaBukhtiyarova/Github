@@ -6,7 +6,7 @@ const getTitleElement = () => {
   return titleElem;
 };
 const getInputElement = () => {
-  const inputElem = document.querySelector('.task-input');
+  const inputElem = document.querySelector('input[type="text"]');
   console.dir(inputElem);
   return inputElem;
 };
