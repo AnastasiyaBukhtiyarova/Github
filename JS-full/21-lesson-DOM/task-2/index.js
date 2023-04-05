@@ -1,32 +1,16 @@
 'use strict';
 
-class Vehicle {
-  constructor(name, numberOfWheels) {
-    this.name = name;
-    this.numberOfWheels = numberOfWheels;
-  }
-  move() {
-    console.log(`${this.name} is moving`);
-  }
-  stop() {
-    console.log(`${this.name} stopped`);
-  }
-}
-class Ship extends Vehicle {
-  constructor(name, MaxSpeed) {
-    super(name, false);
-    this.MaxSpeed = MaxSpeed;
-  }
-
-  move() {
-    console.log(`${this.name} lifting anchor up`);
-    super.move();
-  }
-  stop() {
-    console.log(`${this.name} lifting anchor down`);
-    super.stop();
-  }
-}
-const ship = new Ship('Aurora', 1000);
-ship.move();
-export { Vehicle, Ship };
+const getTitleElement = () => {
+  const titleElem = document.querySelector('.title');
+  console.dir(titleElem);
+  return titleElem;
+};
+const getInputElement = () => {
+  const inputElem = document.querySelector('.task-input');
+  inputElem.getAttribute('type', 'text');
+  console.dir(inputElem);
+  return inputElem;
+};
+getTitleElement();
+getInputElement();
+export { getTitleElement, getInputElement };
