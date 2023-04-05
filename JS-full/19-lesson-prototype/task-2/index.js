@@ -1,19 +1,33 @@
-const getOwnProps = (obj) => {
-  for (let properties in obj) {
-    if (obj.hasOwnProperties(properties)) {
-      return properties;
-    }
+'use strict';
+function getOwnProps(obj) {
+  let arrOfKeys = [];
+  for (let keys in obj) {
+    if (obj.hasOwnProperty(keys) && typeof obj[keys] != 'function')
+      arrOfKeys.push(keys);
   }
-};
-const user1 = {
-  cat() {
-    console.log(`${this.name} is a good cat`);
+  return arrOfKeys;
+}
+
+const vehicle = {
+  move() {
+    console.log(`${this.name} is moving`);
+  },
+  stop() {
+    console.log(`${this.name} stopped`);
   },
 };
-const user = {
-  name: 'Tom',
-  age: 20,
+const ship = {
+  name: 'Argo',
+  age: 17,
+  startMachine() {
+    console.log(`${this.name} lifting anchor up`);
+    ship.move();
+  },
+  stopMachine() {
+    console.log(`${this.name} lifting anchor down`);
+    ship.stop();
+  },
 };
-Object.setPrototypeOf(user, user1);
-getOwnProps(user.cat());
-console.log(getOwnProps(user1));
+Object.setPrototypeOf(ship, vehicle);
+console.log(getOwnProps(ship));
+export { getOwnProps };
