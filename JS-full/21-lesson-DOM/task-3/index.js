@@ -4,11 +4,12 @@ function getItemsList() {
   return elementsList;
 }
 console.log(getItemsList());
+
 function getItemsArray() {
-  const elemensArray = document.querySelectorAll('.tool');
-  console.dir([elemensArray]);
+  const elemensArray = Array.from(document.querySelectorAll('.tool')).map;
+  console.dir(elemensArray);
   Array.from(elemensArray);
   return elemensArray;
 }
 console.log(getItemsArray());
-export { getItemsList, getItemsArray };
+//export { getItemsList, getItemsArray };
