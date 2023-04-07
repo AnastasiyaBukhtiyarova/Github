@@ -10,3 +10,4 @@ const getItemsArray = () => {
   console.dir(elementsArray);
 };
 getItemsArray();
+export { getItemsArray, getItemsList };
