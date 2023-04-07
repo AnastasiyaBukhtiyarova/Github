@@ -6,10 +6,9 @@ function getItemsList() {
 console.log(getItemsList());
 
 function getItemsArray() {
-  const elemensArray = Array.from(document.querySelectorAll('.tool')).map;
+  const elemensArray = document.querySelectorAll('.tool');
   console.dir(elemensArray);
-  Array.from(elemensArray);
   return elemensArray;
 }
 console.log(getItemsArray());
-export { getItemsList, getItemsArray };
+//export { getItemsList, getItemsArray };
