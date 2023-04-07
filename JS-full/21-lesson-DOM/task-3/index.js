@@ -11,3 +11,4 @@ function getItemsArray() {
   return elemensArray;
 }
 console.log(getItemsArray());
+export { getItemsList, getItemsArray };
