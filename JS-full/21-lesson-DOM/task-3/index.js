@@ -7,7 +7,7 @@ console.log(getItemsList());
 
 function getItemsArray() {
   const elementsArray = [...document.querySelectorAll('.tool')];
-  console.dir([Array.from(elementsArray)].map);
+  console.log([Array.from(elementsArray)]);
   return elementsArray;
 }
 console.log(getItemsArray());
