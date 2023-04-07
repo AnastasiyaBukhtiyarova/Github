@@ -12,4 +12,4 @@ function getItemsArray() {
 }
 console.log(getItemsArray());
 
-//export { getItemsList, getItemsArray };
+export { getItemsList, getItemsArray };
