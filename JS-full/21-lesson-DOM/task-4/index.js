@@ -1,8 +1,24 @@
-const setButton = (buttonText) => {
-  const element = document.querySelector('body');
-  element.innerHTML += '<button>' + buttonText + '</button>';
-  return element.innerHTML;
+const getTitle = () => {
+  const title = document.querySelector('.title').textContent;
+  return title;
 };
-const text = 'i am a button';
-console.log(setButton(text));
-//export { setButton };
+console.log(getTitle());
+
+const getDescription = () => {
+  const description = document.querySelector('.about');
+  return description.innerText;
+};
+getDescription();
+
+const getPlans = () => {
+  const plans = document.querySelector('.plans');
+  return plans.innerHTML;
+};
+console.log(getPlans());
+
+const getGoal = () => {
+  const goal = document.querySelector('.goal');
+  return goal.outerHTML;
+};
+console.log(getGoal());
+export { getTitle, getDescription, getPlans, getGoal };
