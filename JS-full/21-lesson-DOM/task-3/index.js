@@ -1,24 +1,15 @@
-const getTitle = () => {
-  const title = document.querySelector('.title').textContent;
-  return title;
-};
-console.log(getTitle());
+function getItemsList() {
+  const elementsList = document.querySelectorAll('.technology');
+  console.dir(elementsList);
+  return elementsList;
+}
+console.log(getItemsList());
 
-const getDescription = () => {
-  const description = document.querySelector('.about');
-  console.log(description.innerText);
-};
-getDescription();
+function getItemsArray() {
+  const elementsArray = Array.from(document.querySelectorAll('.tool'));
+  console.dir(elementsArray);
+  return elementsArray;
+}
+console.log(getItemsArray());
 
-const getPlans = () => {
-  const plans = document.querySelector('.plans');
-  return plans.innerHTML;
-};
-console.log(getPlans());
-
-const getGoal = () => {
-  const goal = document.querySelector('.goal');
-  return goal.outerHTML;
-};
-console.log(getGoal());
-export { getTitle, getDescription, getPlans, getGoal };
+export { getItemsList, getItemsArray };
