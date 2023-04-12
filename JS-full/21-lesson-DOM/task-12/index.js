@@ -1,6 +1,8 @@
 const squaredNumbers = () => {
-  const element = document.querySelector('.number');
-  element.dataset.squaredNumber = element.dataset.number ** 2;
-  return element;
+  const el = document.querySelectorAll('.number');
+  el.forEach((el) => {
+    el.dataset.squaredNumber = el.dataset.number ** 2;
+    console.log(el);
+  });
 };
 console.log(squaredNumbers());
