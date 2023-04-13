@@ -26,3 +26,13 @@ clearButton.addEventListener('click', () => {
   const eventsList = document.querySelector('.events-list');
   eventsList.innerHTML = '';
 });
+
+const removeHandlers = document.querySelector('.remove-handlers-btn');
+removeHandlers.addEventListener('click', () => {
+  divEl.removeEventListener('click', greenDiv);
+  pEl.removeEventListener('click', greenP);
+  spanEl.removeEventListener('click', greenSpan);
+  divEl.removeEventListener('click', greyDiv, true);
+  pEl.removeEventListener('click', greyP, true);
+  spanEl.removeEventListener('click', greySpan, true);
+});
