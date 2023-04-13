@@ -20,3 +20,9 @@ const greySpan = clicked.bind(null, 'span', 'grey');
 divEl.addEventListener('click', greyDiv, true);
 pEl.addEventListener('click', greyP, true);
 spanEl.addEventListener('click', greySpan, true);
+
+const clearButton = document.querySelector('.clear-btn');
+clearButton.addEventListener('click', () => {
+  const eventsList = document.querySelector('.events-list');
+  eventsList.innerHTML = '';
+});
