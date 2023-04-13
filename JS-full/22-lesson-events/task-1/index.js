@@ -36,3 +36,13 @@ removeHandlers.addEventListener('click', () => {
   pEl.removeEventListener('click', greyP, true);
   spanEl.removeEventListener('click', greySpan, true);
 });
+
+const attachHandlers = document.querySelector('.attach-handlers-btn');
+attachHandlers.addEventListener('click', () => {
+  divEl.addEventListener('click', greenDiv);
+  pEl.addEventListener('click', greenP);
+  spanEl.addEventListener('click', greenSpan);
+  divEl.addEventListener('click', greyDiv, true);
+  pEl.addEventListener('click', greyP, true);
+  spanEl.addEventListener('click', greySpan, true);
+});
