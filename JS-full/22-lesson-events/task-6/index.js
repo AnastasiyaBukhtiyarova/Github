@@ -1,6 +1,7 @@
-const setTitle = (text) => {
-  const findEl = document.querySelector('.title');
-  return (findEl.textContent = text);
-};
-const text = 'text';
-export { setTitle };
+const el = document.querySelector('.single-use-btn');
+
+function func() {
+  console.log('clicked');
+  el.removeEventListener('click', func);
+}
+el.addEventListener('click', func);

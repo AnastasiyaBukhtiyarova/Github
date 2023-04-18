@@ -1,11 +1,10 @@
-const finishForm = () => {
-  const element = document.querySelector('.login-form');
-  const newInput = document.createElement('input');
-  newInput.setAttribute('type', 'text');
-  newInput.setAttribute('name', 'login');
-  const changeElement = document.querySelector('input[name=password');
-  changeElement.setAttribute('type', 'password');
-  return element.before(newInput);
+const el1 = document.querySelector('button[data-page-number ="1"]');
+const el2 = document.querySelector('button[data-page-number ="2"]');
+const el3 = document.querySelector('button[data-page-number ="3"]');
+
+const handleClick = (event) => {
+  console.log(event.target.dataset.pageNumber);
 };
-console.log(finishForm());
-//export { finishForm };
+el1.addEventListener('click', handleClick);
+el2.addEventListener('click', handleClick);
+el3.addEventListener('click', handleClick);

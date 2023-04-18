@@ -1,8 +1,5 @@
-const setButton = (buttonText) => {
-  const element = document.querySelector('body');
-  element.innerHTML += '<button>' + buttonText + '</button>';
-  return element.innerHTML;
-};
-const text = 'i am a button';
-console.log(setButton(text));
-export { setButton };
+const el = document.querySelector('.search__btn');
+el.addEventListener('click', () => {
+  const elem = document.querySelector('.search__input');
+  console.log(elem.value);
+});

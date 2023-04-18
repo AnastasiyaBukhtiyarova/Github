@@ -1,9 +1,5 @@
-const createButton = (buttonText) => {
-  const element = document.querySelector('body');
-  const newElement = document.createElement('button');
-  newElement.textContent = buttonText;
-  return element.append(newElement);
+const el = document.querySelector('.text-input');
+const func = (event) => {
+  console.log(event.target.value);
 };
-const text = 'the button is here';
-console.log(createButton(text));
-export { createButton };
+el.addEventListener('change', func);
