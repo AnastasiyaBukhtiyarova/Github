@@ -32,6 +32,6 @@ const renderTasks = (tasksList) => {
 };
 renderTasks(tasks);
 const newList = () => {
-  
+  76
 };
 newList();
