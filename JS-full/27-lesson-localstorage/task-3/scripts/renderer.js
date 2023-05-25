@@ -5,15 +5,11 @@ const compareTasks = (a, b) => {
   if (a.done - b.done !== 0) return a.done - b.done;
 };
 
-const createListItem = ({ text, done, id }) => {
+const createListItem = ({ text, id }) => {
   const listItemElem = document.createElement('li');
   listItemElem.classList.add('list__item');
   const checkboxElem = document.createElement('input');
   checkboxElem.setAttribute('type', 'checkbox');
-  /*checkboxElem.checked = done;
-  if (done) {
-    listItemElem.classList.add('list__item_done');
-  }*/
   listItemElem.setAttribute('data-id', id);
 
   const onClickCheckbox = () => {
@@ -25,9 +21,7 @@ const createListItem = ({ text, done, id }) => {
       listItemElem.classList.remove('list__item_done');
     }
   };
-
   checkboxElem.addEventListener('click', onClickCheckbox);
-
   checkboxElem.classList.add('list__item-checkbox');
   listItemElem.append(checkboxElem, text);
   return listItemElem;
