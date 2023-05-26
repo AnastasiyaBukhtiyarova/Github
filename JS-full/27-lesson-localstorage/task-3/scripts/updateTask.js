@@ -2,7 +2,7 @@ import { setItem, getItem } from './storage.js';
 import { renderTasks } from './renderer.js';
 
 export const onToggleTask = (e) => {
-  const isCheckbox = e.target.classlist.contains('list__item-checkbox');
+  const isCheckbox = e.target.classList.contains('list__item-checkbox');
   if (!isCheckbox) {
     return;
   }
