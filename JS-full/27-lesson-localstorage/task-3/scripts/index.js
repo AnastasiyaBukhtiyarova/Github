@@ -1,3 +1,5 @@
+localStorage.clear();
+
 import { initToDoListHandlers } from './toDoList.js';
 
 import { renderTasks } from './renderer.js';
