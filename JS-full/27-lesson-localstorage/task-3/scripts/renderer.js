@@ -1,8 +1,9 @@
+
 import { getItem } from './storage.js';
 
 const listElem = document.querySelector('.list');
 const compareTasks = (a, b) => {
-  if (a.done - b.done !== 0) return a.done - b.done;
+  if (a.done - b.done) return a.done - b.done;
 };
 
 const createListItem = ({ text, done, id }) => {
@@ -25,7 +26,7 @@ const createListItem = ({ text, done, id }) => {
     }
   };
   checkboxElem.addEventListener('click', onClickCheckbox);
-  checkboxElem.classList.add('list__item-checkbox');
+  checkboxElem.classList.add('list__item-checkbox'); 
   listItemElem.append(checkboxElem, text);
   return listItemElem;
 };
