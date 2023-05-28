@@ -33,6 +33,7 @@ const createListItem = ({ text, done, id }) => {
 const renderTasks = () => {
   const tasksList = getItem('tasksList') || [];
   listElem.innerHTML = '';
+
   const tasksElems = tasksList.sort(compareTasks).map(createListItem);
 
   listElem.append(...tasksElems);
