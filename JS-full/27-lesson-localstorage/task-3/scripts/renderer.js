@@ -2,18 +2,6 @@ import { getItem } from './storage.js';
 
 const listElem = document.querySelector('.list');
 
-/*const createCheckbox = ({ done, id }) => {
-  const checkboxElem = document.createElement('input');
-  checkboxElem.setAttribute('type', 'checkbox');
-
-  checkboxElem.setAttribute('data-id', id);
-  checkboxElem.checked = done;
-  checkboxElem.dataset.id = Math.random().toString();
-
-  checkboxElem.classList.add('list__item-checkbox');
-
-};
-*/
 const createListItem = ({ text, done, id }) => {
   const listItemElem = document.createElement('li');
   listItemElem.classList.add('list__item');
