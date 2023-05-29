@@ -11,7 +11,6 @@ const setItem = (key, value) => {
 
 const getItem = (key) => JSON.parse(localStorage.getItem(key));
 
-
 const createListItem = ({ text, done, id }) => {
   const listItemElem = document.createElement('li');
   listItemElem.classList.add('list__item');
@@ -60,7 +59,7 @@ const onCreateTask = () => {
   renderTasks();
 };
 const onToggleTask = (e) => {
-  const isCheckbox = e.target.classList.contains('list__item-checkbox');
+  const isCheckbox = e.target.classList.contains('.task-input');
   if (!isCheckbox) {
     return;
   }
@@ -78,7 +77,7 @@ const onToggleTask = (e) => {
   setItem('tasksList', newTasksList);
   renderTasks();
 };
- const initToDoListHandlers = () => {
+const initToDoListHandlers = () => {
   const createBtnElem = document.querySelector('.create-task-btn');
   createBtnElem.addEventListener('click', onCreateTask);
 
