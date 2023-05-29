@@ -1,4 +1,3 @@
-localStorage.clear();
 
 import { initToDoListHandlers } from './toDoList.js';
 
