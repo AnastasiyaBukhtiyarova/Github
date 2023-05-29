@@ -1,42 +1,42 @@
-
 import { getItem } from './storage.js';
 
 const listElem = document.querySelector('.list');
-const compareTasks = (a, b) => {
-  if (a.done - b.done) return a.done - b.done;
+
+const createCheckbox = ({ done, id }) => {
+  const checkboxElem = document.createElement('input');
+  checkboxElem.setAttribute('type', 'checkbox');
+  checkboxElem.dataset.id = Math.random().toString();
+  checkboxElem.checked = done;
+  checkboxElem.classList.add('list__item-checkbox');
+
+  return checkboxElem;
 };
 
 const createListItem = ({ text, done, id }) => {
   const listItemElem = document.createElement('li');
   listItemElem.classList.add('list__item');
-  const checkboxElem = document.createElement('input');
-  checkboxElem.setAttribute('type', 'checkbox');
-  listItemElem.setAttribute('data-id', id);
-  checkboxElem.checked = done;
+  const checkboxElem = createCheckbox({ done, id });
   if (done) {
     listItemElem.classList.add('list__item_done');
   }
   const onClickCheckbox = () => {
-    if (checkboxElem.checked) {
-      listItemElem.dataset.id = true;
-      listItemElem.classList.add('list__item_done');
-    } else {
-      listItemElem.dataset.id = false;
-      listItemElem.classList.remove('list__item_done');
-    }
+    checkboxElem.checked
+      ? listItemElem.classList.add('list__item_done')
+      : listItemElem.classList.remove('list__item_done');
   };
   checkboxElem.addEventListener('click', onClickCheckbox);
-  checkboxElem.classList.add('list__item-checkbox'); 
+
   listItemElem.append(checkboxElem, text);
+
   return listItemElem;
 };
 
-const renderTasks = () => {
+export const renderTasks = () => {
   const tasksList = getItem('tasksList') || [];
   listElem.innerHTML = '';
-
-  const tasksElems = tasksList.sort(compareTasks).map(createListItem);
+  const tasksElems = tasksList
+    .sort((a, b) => a.done - b.done)
+    .map(createListItem);
 
   listElem.append(...tasksElems);
 };
-export { renderTasks };

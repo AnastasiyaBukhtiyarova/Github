@@ -1,11 +1,13 @@
-import { setItem, getItem } from './storage.js';
 import { renderTasks } from './renderer.js';
+import { getItem, setItem } from './storage.js';
 
 export const onToggleTask = (e) => {
-  const isCheckbox = e.target.classList.contains('list__item-checkbox');
+  const isCheckbox = e.target.classList.contains('.task-input');
+
   if (!isCheckbox) {
     return;
   }
+
   const tasksList = getItem('tasksList');
   const newTasksList = tasksList.map((task) => {
     if (task.id === e.target.dataset.id) {
@@ -13,10 +15,12 @@ export const onToggleTask = (e) => {
       return {
         ...task,
         done,
+        finishDate: done ? new Date().toISOString() : null,
       };
     }
     return task;
   });
   setItem('tasksList', newTasksList);
+
   renderTasks();
 };
