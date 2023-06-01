@@ -1,7 +1,7 @@
 const calc = (initValue) => {
   let result = initValue;
 
-  const mathOperations = {
+  const calculator = {
     add(value) {
       result += value;
       return this;
@@ -12,7 +12,7 @@ const calc = (initValue) => {
       return this;
     },
     multiply(value) {
-     result *= value;
+      result *= value;
       return this;
     },
     divide(value) {
@@ -23,7 +23,7 @@ const calc = (initValue) => {
       return result;
     },
   };
-  return mathOperations;
+  return calculator;
 };
 const result = calc(2).add(2).substract(2).divide(10).multiply(0).result();
 console.log(result);
