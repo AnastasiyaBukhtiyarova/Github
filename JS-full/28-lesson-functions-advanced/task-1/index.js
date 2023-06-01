@@ -7,7 +7,7 @@ const calc = (initValue) => {
       return this;
     },
 
-    subtract(value) {
+    substract(value) {
       result -= value;
       return this;
     },
@@ -25,6 +25,6 @@ const calc = (initValue) => {
   };
   return calculator;
 };
-const result = calc(2).add(2).subtract(2).div(10).mult(0).result();
+const result = calc(2).add(2).substract(2).div(10).mult(0).result();
 console.log(result);
 export { calc };
