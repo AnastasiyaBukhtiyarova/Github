@@ -27,4 +27,4 @@ const calc = (initValue) => {
 };
 const result = calc(2).add(2).substract(2).divide(10).multiply(0).result();
 console.log(result);
-//export { calc };
+export { calc };
