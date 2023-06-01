@@ -11,11 +11,11 @@ const calc = (initValue) => {
       result -= value;
       return this;
     },
-    multiply(value) {
+    mult(value) {
       result *= value;
       return this;
     },
-    divide(value) {
+    div(value) {
       result /= value;
       return this;
     },
@@ -25,6 +25,6 @@ const calc = (initValue) => {
   };
   return calculator;
 };
-const result = calc(2).add(2).substract(2).divide(10).multiply(0).result();
+const result = calc(2).add(2).substract(2).div(10).mult(0).result();
 console.log(result);
 export { calc };
