@@ -13,13 +13,13 @@ const addImage = (imgSrc, callback) => {
   imgElem.addEventListener('error', () => callback('Image load fail'));
 };
 const imgSrc = './mountain.jpg';
-const onImageLoaded = (error, data) => {
+const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
   }
 
-  const { width, height } = data;
+  const { width, height } = imgElem;
   const sizeElem = document.querySelector('.image-size');
   sizeElem.textContent = `${width} х ${height}`;
 };
