@@ -1,10 +1,48 @@
-const today = new Date();
-const milisec = 1;
-const sec = milisec * 1000;
-const min = sec * 60;
-const hour = min * 60;
-const day = 24 * min;
-console.log(today);
+export const shmoment = (date) => {
+  let result = new Date(date);
+  const newSetDate = {
+    add(value, valueDate) {
+      if (value === 'years')
+        result = new Date(result.setFullYear(result.getFullYear() + valueDate));
+      if (value === 'months')
+        result = new Date(result.setMonth(result.getMonth() + valueDate));
+      if (value === 'days')
+        result = new Date(result.setDate(result.getDate() + valueDate));
+      if (value === 'hours')
+        result = new Date(result.setHours(result.getHours() + valueDate));
+      if (value === 'minutes')
+        result = new Date(result.setMinutes(result.getMinutes() + valueDate));
+      if (value === 'seconds')
+        result = new Date(result.setSeconds(result.getSeconds() + valueDate));
+      if (value === 'milliseconds')
+        result = new Date(
+          result.setMilliseconds(result.getMilliseconds() + valueDate)
+        );
+      return this;
+    },
+    subtract(value, valueDate) {
+      if (value === 'years')
+        result = new Date(result.setFullYear(result.getFullYear() - valueDate));
+      if (value === 'months')
+        result = new Date(result.setMonth(result.getMonth() - valueDate));
+      if (value === 'days')
+        result = new Date(result.setDate(result.getDate() - valueDate));
+      if (value === 'hours')
+        result = new Date(result.setHours(result.getHours() - valueDate));
+      if (value === 'minutes')
+        result = new Date(result.setMinutes(result.getMinutes() - valueDate));
+      if (value === 'seconds')
+        result = new Date(result.setSeconds(result.getSeconds() - valueDate));
+      if (value === 'milliseconds')
+        result = new Date(
+          result.setMilliseconds(result.getMilliseconds() - valueDate)
+        );
 
-const day1 = today - new Date(5 * day);
-console.log(day1 / day);
+      return this;
+    },
+    result() {
+      return result;
+    },
+  };
+  return newSetDate;
+};
