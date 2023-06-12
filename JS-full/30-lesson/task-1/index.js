@@ -1,27 +1,19 @@
 const addImage = (imgSrc) => {
-  const promise = new Promise((resolve, reject) => {
+  const p = new Promise((resolve, reject) => {
+    const pageElem = document.querySelector('.page');
     const imgElem = document.createElement('img');
-    imgElem.setAttribute('alt', 'mountains');
+    imgElem.setAttribute('alt', 'picture');
     imgElem.src = imgSrc;
-    const containerElem = document.querySelector('.page');
-    containerElem.append(imgElem);
+    pageElem.append(imgElem);
 
-    function onImageLoaded() {
+    const onImageLoaded = () => {
       const { width, height } = imgElem;
       resolve({ width, height });
-      console.log(`${width} х ${height}`);
-    }
-
+    };
     imgElem.addEventListener('load', onImageLoaded);
-
-    imgElem.addEventListener('error', () => {
-      reject(new Error('Image load failed'));
-    });
+    imgElem.addEventListener('error', () =>
+      reject(new Error('Image load is failed...'))
+    );
   });
-
-  return promise;
+  return p;
 };
-
-const imgSrc = './mountain.jpg';
-const result = addImage(imgSrc);
-result.catch((load) => console.log(load));
