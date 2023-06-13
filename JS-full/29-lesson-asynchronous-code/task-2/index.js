@@ -1,26 +1,13 @@
-const favorites = ['id-2', 'id-5', 'id-1'];
-
-const tree = {
-  id: 'id-1',
-  name: 'Products',
-  nodes: [
-    {
-      id: 'id-2',
-      name: 'Food',
-      nodes: [],
-    },
-  ],
+export const pinger = (count, period) => {
+  // put your code here
+  let i = count;
+      console.log('Ping');
+  const interval = setInterval(() => {
+    if (i-- > 0) {
+      console.log('Ping');
+    } else {
+      clearInterval(interval);
+    }
+  }, period);
 };
-
-const markFavorites = (tree, favorites) => {
-  const isFavorite = favorites.includes(tree.id);
-
-  return {
-    ...tree,
-    isFavorite,
-    nodes: tree.nodes.map((childNode) => markFavorites(childNode, favorites)),
-  };
-};
-
-const result = markFavorites(tree, favorites);
-console.log(result);
+pinger(5, 1000);
