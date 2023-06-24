@@ -1,7 +1,6 @@
 import { renderTasks } from './renderer.js';
-import { updateTask, createTask } from './serverExchange.js';
+import { getTasksList, updateTask } from './serverExchange.js';
 import { setItem, getItem } from './storage.js';
-import { getTasksList, deleteTask } from './serverExchange.js';
 
 export const onToggleTask = (e) => {
   const isCheckbox = e.target.classList.contains('list__item-checkbox');
@@ -12,8 +11,9 @@ export const onToggleTask = (e) => {
 
   const tasksList = getItem('tasksList');
   const taskId = e.target.dataset.id;
-  const { text, createDate } = tasksList.find((task) => task.id === taskId);
   const done = e.target.checked;
+  const { text, createDate } = tasksList.find((task) => task.id === taskId);
+
   const updatedTask = {
     text,
     createDate,
@@ -22,7 +22,7 @@ export const onToggleTask = (e) => {
   };
 
   updateTask(taskId, updatedTask)
-    .then(() => getTasksList)
+    .then(() => getTasksList())
     .then((newTasksList) => {
       setItem('tasksList', newTasksList);
       renderTasks();

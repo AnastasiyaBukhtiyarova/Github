@@ -1,11 +1,4 @@
 import { getItem } from './storage.js';
-import { onCreateTask } from './createTask.js';
-import {
-  createTask,
-  getTasksList,
-  updateTask,
-  deleteTask,
-} from './serverExchange.js';
 
 const compareTasks = (a, b) => {
   if (a.done - b.done !== 0) {
@@ -35,12 +28,13 @@ const createListItem = ({ text, done, id }) => {
   const listItemElem = document.createElement('li');
   listItemElem.classList.add('list__item');
   const checkboxElem = createCheckbox({ done, id });
+  const textElem = document.createElement('span');
   if (done) {
-    listItemElem.classList.add('list__item_done');
+  listItemElem.classList.add('list__item_done');
   }
   const deleteBtnElem = document.createElement('button');
   deleteBtnElem.classList.add('list__item-delete-btn');
-  const textElem = document.createElement(span);
+
   textElem.classList.add('list__item-text');
   textElem.textContent = text;
   listItemElem.append(checkboxElem, textElem, deleteBtnElem);
