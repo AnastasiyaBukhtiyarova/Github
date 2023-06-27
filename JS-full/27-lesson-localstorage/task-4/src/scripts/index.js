@@ -1,8 +1,12 @@
 import { initTodoListHandlers } from './toDoList.js';
 import { renderTasks } from './renderer.js';
 
+import { deleteTask, getTasksList } from './serverExchange.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-  renderTasks();
+  getTasksList().then((tasksList) => {
+    renderTasks();
+  });
   initTodoListHandlers();
 });
 
