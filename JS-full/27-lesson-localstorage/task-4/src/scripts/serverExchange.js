@@ -1,12 +1,7 @@
-import { setItem } from './storage.js';
-
-
-
 const baseUrl = 'https://649333cf428c3d2035d17deb.mockapi.io/api/v1/tasks';
 
 const mapTasks = (tasks) => {
   tasks.map(({ _id, ...rest }) => ({ ...rest, id: _id }));
-  setItem('tasksList', tasks);
 };
 export const getTasksList = () => {
   return fetch(baseUrl)
@@ -31,7 +26,6 @@ export const updateTask = (taskId, updatedTaskData) => {
     body: JSON.stringify(updatedTaskData),
   });
 };
-
 export const deleteTask = (taskId) => {
   return fetch(`${baseUrl}/${taskId}`, {
     method: 'DELETE',
