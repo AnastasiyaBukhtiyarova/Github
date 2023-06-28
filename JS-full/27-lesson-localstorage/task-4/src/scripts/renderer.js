@@ -1,4 +1,3 @@
-import { deleteTask } from './serverExchange.js';
 import { getItem } from './storage.js';
 
 const compareTasks = (a, b) => {
@@ -36,7 +35,6 @@ const createListItem = ({ text, done, id }) => {
   const listItemElem = document.createElement('li');
   listItemElem.classList.add('list__item');
   const checkboxElem = createCheckbox({ done, id });
-  const textElem = document.createElement('span');
   if (done) {
     listItemElem.classList.add('list__item_done');
   }
