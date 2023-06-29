@@ -3,7 +3,7 @@ import { getTasksList } from './serverExchange.js';
 import { renderTasks } from './renderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  getTasksList().then(() => renderTasks());
+  renderTasks();
   initTodoListHandlers();
 });
 

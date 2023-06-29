@@ -39,6 +39,7 @@ const createListItem = ({ text, done, id }) => {
     listItemElem.classList.add('list__item_done');
   }
   const deleteBtnElem = createDeleteButton(id);
+  const textElem = document.createElement('span');
   textElem.classList.add('list__item-text');
   textElem.textContent = text;
   listItemElem.append(checkboxElem, textElem, deleteBtnElem);
@@ -47,7 +48,7 @@ const createListItem = ({ text, done, id }) => {
 };
 
 export const renderTasks = () => {
-  const tasksList = getItem('tasksList') || [];
+  const tasksList = getItem(['tasksList']) || [];
   listElem.innerHTML = '';
   const tasksElems = tasksList.sort(compareTasks).map(createListItem);
 
