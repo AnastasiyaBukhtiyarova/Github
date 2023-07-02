@@ -5,7 +5,7 @@ import { setItem } from './storage.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   getTasksList().then((tasks) => {
-  //  setItem('tasksList', tasks);
+    //  setItem('tasksList', tasks);
     renderTasks();
   });
   initTodoListHandlers();
