@@ -24,13 +24,6 @@ const createCheckbox = ({ done, id }) => {
   return checkboxElem;
 };
 
-const createDeleteButton = (id) => {
-  const deleteBtnElem = document.createElement('button');
-  deleteBtnElem.classList.add('list__item-delete-btn');
-  deleteBtnElem.setAttribute('type', 'checkbox');
-  deleteBtnElem.setAttribute('data-id', id);
-  return deleteBtnElem;
-};
 const createListItem = ({ text, done, id }) => {
   const listItemElem = document.createElement('li');
   listItemElem.classList.add('list__item');
@@ -38,10 +31,7 @@ const createListItem = ({ text, done, id }) => {
   if (done) {
     listItemElem.classList.add('list__item_done');
   }
-  const deleteBtnElem = createDeleteButton(id);
-  textElem.classList.add('list__item-text');
-  textElem.textContent = text;
-  listItemElem.append(checkboxElem, textElem, deleteBtnElem);
+  listItemElem.append(checkboxElem, text);
 
   return listItemElem;
 };

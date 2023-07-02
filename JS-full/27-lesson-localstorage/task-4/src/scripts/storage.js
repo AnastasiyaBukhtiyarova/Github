@@ -1,5 +1,4 @@
 export const setItem = (key, value) => {
-  console.log(value);
   localStorage.setItem(key, JSON.stringify(value));
 };
 
