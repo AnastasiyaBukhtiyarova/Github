@@ -5,8 +5,8 @@ const mapTasks = (tasks) => {
 };
 
 export const getTasksList = () => {
-  return fetch(baseUrl).then((response) => response.json());
-  //  .then((tasks) => mapTasks(tasks));
+  return fetch(baseUrl).then((response) => response.json())
+  // .then((tasks) => mapTasks(tasks));
 };
 export const createTask = (taskData) => {
   return fetch(baseUrl, {
