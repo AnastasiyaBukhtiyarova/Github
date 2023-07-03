@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks();
   });
   initTodoListHandlers();
+ 
 });
 
 const onStorageChange = (e) => {

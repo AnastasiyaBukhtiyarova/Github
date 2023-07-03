@@ -4,23 +4,9 @@ import { deleteTask, getTasksList } from './serverExchange.js';
 import { renderTasks } from './renderer.js';
 import { setItem, getItem } from './storage.js';
 
-const onDeleteBtn = (e) => {
-  const isDeleteButton = e.target.classList.contains('list__item-delete-btn');
-  const taskId = e.target.dataset.id;
+const onDeleteTask = (e) => {
+  const taskId = e.target.closest('.list__item').dataset.id;
 
-  if (isDeleteButton) {
-    return;
-  }
-  const tasksList = getItem('tasksList');
-  const { text, createDate } = tasksList.find((task) => task.id === taskId);
-  const done = e.target.checked;
-  const updatedTask = {
-    taskId,
-    text,
-    createDate,
-    done,
-    finishDate: done ? new Date().toISOString() : null,
-  };
   deleteTask(taskId)
     .then(() => getTasksList())
     .then((newTasksList) => {
@@ -29,22 +15,28 @@ const onDeleteBtn = (e) => {
     });
 };
 
-const onListClick = (e) => {
+export const onListClick = (e) => {
   const isCheckbox = e.target.classList.contains('list__item-checkbox');
+  if (isCheckbox) {
+    onToggleTask(e);
+    return;
+  }
 
   const isDeleteButton = e.target.classList.contains('list__item-delete-btn');
-
   if (isDeleteButton) {
-    onDeleteBtn(e);
-  } else if (isCheckbox) {
-    onToggleTask(e);
+    onDeleteTask(e);
   }
 };
+
 export const initTodoListHandlers = () => {
   const createBtnElem = document.querySelector('.create-task-btn');
+  const deleteBtnElem = document.querySelector('.list__item-delete-btn');
+
   createBtnElem.addEventListener('click', onCreateTask);
 
+  // deleteBtnElem.addEventListener('click', onToggleBtn);
   const todoListElem = document.querySelector('.list');
+
   // todoListElem.addEventListener('click', onToggleTask);
   todoListElem.addEventListener('click', onListClick);
 };
