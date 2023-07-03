@@ -11,17 +11,14 @@ export const onCreateTask = () => {
     return;
   }
   taskTitleInputElem.value = '';
-  // const tasksList = getItem('tasksList') || [];
-  const newTask =
-    //tasksList.concat(
-    {
-      text,
-      done: false,
-      createDate: new Date().toISOString(),
-      id: Math.random().toString(),
-    };
-  //  )
-  console.log(newTask);
+ // const tasksList = getItem('tasksList');
+  const newTask = {
+    text,
+    done: false,
+    createDate: new Date().toISOString(),
+    id: Math.random().toString(),
+  };
+
   createTask(newTask)
     .then(() => getTasksList())
     .then(() => {

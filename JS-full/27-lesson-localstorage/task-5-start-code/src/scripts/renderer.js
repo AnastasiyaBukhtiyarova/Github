@@ -1,4 +1,11 @@
 import { getItem } from './storage.js';
+import { onCreateTask } from './createTask.js';
+import {
+  createTask,
+  getTasksList,
+  updateTask,
+  deleteTask,
+} from './serverExchange.js';
 
 const compareTasks = (a, b) => {
   if (a.done - b.done !== 0) {
@@ -31,7 +38,12 @@ const createListItem = ({ text, done, id }) => {
   if (done) {
     listItemElem.classList.add('list__item_done');
   }
-  listItemElem.append(checkboxElem, text);
+  const deleteBtnElem = document.createElement('button');
+  deleteBtnElem.classList.add('list__item-delete-btn');
+  const textElem = document.createElement('span');
+  textElem.classList.add('list__item-text');
+  textElem.textContent = text;
+  listItemElem.append(checkboxElem, textElem, deleteBtnElem);
 
   return listItemElem;
 };
@@ -39,7 +51,7 @@ const createListItem = ({ text, done, id }) => {
 export const renderTasks = () => {
   const tasksList = getItem('tasksList') || [];
   listElem.innerHTML = '';
-  const tasksElems =  tasksList.sort(compareTasks).map(createListItem);
-
+  const tasksElems = tasksList.map(createListItem).sort(compareTasks);
+    
   listElem.append(...tasksElems);
 };
