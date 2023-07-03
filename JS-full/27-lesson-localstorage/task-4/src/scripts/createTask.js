@@ -3,27 +3,6 @@ import { getItem, setItem } from './storage.js';
 import { createTask } from './serverExchange.js';
 import { getTasksList } from './serverExchange.js';
 
-/*export const onCreateTask = () => {
-  const taskTitleInputElem = document.querySelector('.task-input');
-
-  const text = taskTitleInputElem.value;
-  if (!text) {
-    return;
-  }
-  taskTitleInputElem.value = '';
-  const tasksList = getItem('tasksList') || [];
-
-  const newTasksList = tasksList.concat({
-    text,
-    done: false,
-    createDate: new Date().toISOString(),
-    id: Math.random().toString(),
-  });
-  setItem('tasksList', newTasksList);
-
-  renderTasks();
-};
-*/
 export const onCreateTask = () => {
   const taskTitleInputElem = document.querySelector('.task-input');
 
@@ -46,9 +25,10 @@ export const onCreateTask = () => {
       renderTasks();
     });
 };
+
 export const onDeleteTask = () => {
   const taskTitleInputElem = document.querySelector('.task-input');
-
+ 
   const text = taskTitleInputElem.value;
   if (!text) {
     return;
@@ -59,7 +39,8 @@ export const onDeleteTask = () => {
     text,
     done: false,
     createDate: new Date().toISOString(),
-    id: Math.random().toString(),
+     id: Math.random().toString(),
+    
   };
   createTask(newTask)
     .then(() => getTasksList())

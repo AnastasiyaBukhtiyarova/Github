@@ -5,9 +5,11 @@ import { renderTasks } from './renderer.js';
 import { setItem, getItem } from './storage.js';
 
 const onDeleteTask = (e) => {
-  const taskId = e.target.closest('.list__item').dataset.id;
+  const deleteBtnElem = document.querySelector('.list__item-delete-btn');
+  const taskId = e.target.dataset.id;
+  deleteBtnElem.dataset.id = taskId;
 
-  deleteTask(taskId)
+  deleteTask(deleteBtnElem.id)
     .then(() => getTasksList())
     .then((newTasksList) => {
       setItem('tasksList', newTasksList);
@@ -23,6 +25,7 @@ export const onListClick = (e) => {
   }
 
   const isDeleteButton = e.target.classList.contains('list__item-delete-btn');
+
   if (isDeleteButton) {
     onDeleteTask(e);
   }
@@ -30,13 +33,10 @@ export const onListClick = (e) => {
 
 export const initTodoListHandlers = () => {
   const createBtnElem = document.querySelector('.create-task-btn');
-  const deleteBtnElem = document.querySelector('.list__item-delete-btn');
 
   createBtnElem.addEventListener('click', onCreateTask);
 
-  // deleteBtnElem.addEventListener('click', onToggleBtn);
   const todoListElem = document.querySelector('.list');
 
-  // todoListElem.addEventListener('click', onToggleTask);
   todoListElem.addEventListener('click', onListClick);
 };
