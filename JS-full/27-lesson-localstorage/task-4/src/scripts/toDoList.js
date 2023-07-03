@@ -5,11 +5,9 @@ import { renderTasks } from './renderer.js';
 import { setItem, getItem } from './storage.js';
 
 const onDeleteTask = (e) => {
-  const deleteBtnElem = document.querySelector('.list__item-delete-btn');
   const taskId = e.target.dataset.id;
-  deleteBtnElem.dataset.id = taskId;
 
-  deleteTask(deleteBtnElem.id)
+  deleteTask(taskId)
     .then(() => getTasksList())
     .then((newTasksList) => {
       setItem('tasksList', newTasksList);
