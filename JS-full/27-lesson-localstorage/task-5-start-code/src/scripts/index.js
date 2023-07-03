@@ -1,19 +1,14 @@
 import { initTodoListHandlers } from './toDoList.js';
 import { renderTasks } from './renderer.js';
-
-import {
-  createTask,
-  getTasksList,
-  updateTask,
-  deleteTask,
-} from './serverExchange.js';
-import { setItem, getItem } from './storage.js';
+import { setItem } from './storage.js';
+import { getTasksList } from './serverExchange.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   getTasksList().then((tasksList) => {
-   //setItem('tasksList', tasksList);
+    setItem('tasksList', tasksList);
     renderTasks();
   });
+
   initTodoListHandlers();
 });
 

@@ -4,7 +4,10 @@ import { getTasksList } from './serverExchange.js';
 import { setItem } from './storage.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderTasks();
+  getTasksList().then((tasks) => {
+    //  setItem('tasksList', tasks);
+    renderTasks();
+  });
   initTodoListHandlers();
 });
 
