@@ -26,8 +26,7 @@ const createUser = () => {
 const onUserValidity = () => {
   if (loginForm.reportValidity() === true) {
     createUser();
-  } else {
-    registerButton.setAttribute('disabled', false);
+    registerButton.removeAttribute('disabled');
   }
 };
 const onResetForm = (event) => {
