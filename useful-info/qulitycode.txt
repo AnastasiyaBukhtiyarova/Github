@@ -1,0 +1,15 @@
+Code quality (javascript)
+Don't use:
+Найменование переменных/функций/массивов важно. Должно быть понятно что делает 
+Магические цифры и стринги
+Вложенность кода больше чем 2
+Слишком много if/else + они не должны быть сложными
+Дублирование кода
+Переменная используется лишь раз
+Вместо циклов используем массивы
+Redundant iteration throught arrays or objects - speed
+Take attention to the memory usage, don't create new array if it is not needed
+Дели код на логические блоки
+BIG code blocks (inside {} - if, loop or array methods)
+Каждая строчка кода должна быть легко читаема
+Каждый кусочек кода должен быть протестирован
