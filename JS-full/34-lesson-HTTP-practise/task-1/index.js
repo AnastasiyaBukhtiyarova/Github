@@ -1,9 +1,5 @@
 const baseUrl = 'https://64abe8419edb4181202ec69a.mockapi.io/login-form/user';
-const emailInputEl = document.querySelector('[type=email]');
-const userNameInputEl = document.querySelector('[type=text]');
-const passwordInputEl = document.querySelector('[type=password]');
 const registerButton = document.querySelector('.submit-button');
-registerButton.disabled = true;
 const loginForm = document.querySelector('.login-form');
 
 const getUser = () => {
