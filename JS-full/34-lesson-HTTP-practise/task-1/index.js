@@ -2,9 +2,6 @@ const baseUrl = 'https://64abe8419edb4181202ec69a.mockapi.io/login-form/user';
 const registerButton = document.querySelector('.submit-button');
 const loginForm = document.querySelector('.login-form');
 
-const getUser = () => {
-  return fetch(baseUrl).then((response) => response.json());
-};
 const postUser = (data) => {
   return fetch(baseUrl, {
     method: 'POST',
@@ -18,9 +15,9 @@ const onUserValidity = () => {
   if (loginForm.reportValidity() === true) {
     registerButton.removeAttribute('disabled');
   } else {
-    registerButton.setAttribute('disabled' , true);
+    registerButton.setAttribute('disabled', true);
   }
-  console.log(loginForm.reportValidity())
+  console.log(loginForm.reportValidity());
 };
 const onCreateUser = () => {
   const formData = Object.fromEntries(new FormData(loginForm));
