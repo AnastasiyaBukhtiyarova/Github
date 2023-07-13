@@ -17,12 +17,14 @@ const postUser = (data) => {
 const onUserValidity = () => {
   if (loginForm.reportValidity() === true) {
     registerButton.removeAttribute('disabled');
+  } else {
+    registerButton.setAttribute('disabled' , true);
   }
+  console.log(loginForm.reportValidity())
 };
 const onCreateUser = () => {
   const formData = Object.fromEntries(new FormData(loginForm));
   alert(JSON.stringify(formData));
-  postUser(formData);
 };
 
 const onResetForm = (event) => {
@@ -33,5 +35,3 @@ loginForm.addEventListener('input', onUserValidity);
 registerButton.addEventListener('click', onCreateUser);
 
 registerButton.addEventListener('reset', onResetForm);
-
-getUser();
