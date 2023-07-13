@@ -3,12 +3,13 @@ const emailInputEl = document.querySelector('[type=email]');
 const userNameInputEl = document.querySelector('[type=text]');
 const passwordInputEl = document.querySelector('[type=password]');
 const registerButton = document.querySelector('.submit-button');
+registerButton.disabled = true;
 const loginForm = document.querySelector('.login-form');
 
 const getUser = () => {
   return fetch(baseUrl).then((response) => response.json());
 };
-const recordUser = (data) => {
+const postUser = (data) => {
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -17,22 +18,24 @@ const recordUser = (data) => {
     body: JSON.stringify(data),
   });
 };
-
-const createUser = () => {
-  const formData = Object.fromEntries(new FormData(loginForm));
-  alert(JSON.stringify(formData));
-  recordUser(formData);
-};
 const onUserValidity = () => {
   if (loginForm.reportValidity() === true) {
-    createUser();
     registerButton.removeAttribute('disabled');
   }
 };
+const onCreateUser = () => {
+  const formData = Object.fromEntries(new FormData(loginForm));
+  alert(JSON.stringify(formData));
+  postUser(formData);
+};
+
 const onResetForm = (event) => {
+  event.preventDefault();
   event.reset();
 };
-registerButton.addEventListener('click', onUserValidity);
+loginForm.addEventListener('input', onUserValidity);
+registerButton.addEventListener('click', onCreateUser);
+
 registerButton.addEventListener('reset', onResetForm);
 
 getUser();
