@@ -9,6 +9,8 @@ const postUser = (data) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
+  }).then((response) => {
+    response.json();
   });
 };
 const onUserValidity = () => {
@@ -17,10 +19,11 @@ const onUserValidity = () => {
   } else {
     registerButton.setAttribute('disabled', true);
   }
-  console.log(loginForm.reportValidity());
+  //console.log(loginForm.reportValidity());
 };
 const onCreateUser = () => {
   const formData = Object.fromEntries(new FormData(loginForm));
+  postUser(formData);
   alert(JSON.stringify(formData));
 };
 
@@ -30,5 +33,4 @@ const onResetForm = (event) => {
 };
 loginForm.addEventListener('input', onUserValidity);
 registerButton.addEventListener('click', onCreateUser);
-
 registerButton.addEventListener('reset', onResetForm);
