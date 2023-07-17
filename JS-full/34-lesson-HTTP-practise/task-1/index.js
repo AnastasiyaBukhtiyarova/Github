@@ -1,4 +1,4 @@
-const baseUrl = 'https://64abe8419edb4181202ec69a.mockapi.io/login-form/user';
+const baseUrl = 'https://64b53125f3dbab5a95c6e5d0.mockapi.io/loginform/user';
 const registerButton = document.querySelector('.submit-button');
 const loginForm = document.querySelector('.login-form');
 
