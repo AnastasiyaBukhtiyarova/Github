@@ -1,4 +1,4 @@
-const baseUrl = 'https://64b53125f3dbab5a95c6e5d0.mockapi.io/resourse/';
+const baseUrl = 'https://64b53125f3dbab5a95c6e5d0.mockapi.io/resourse';
 function getUsersList() {
   // put your code here
   return fetch(baseUrl).then((response) => response.json());
@@ -14,6 +14,13 @@ export function getUserById(userId) {
 
 export function createUser(userData) {
   // put your code here
+  return fetch(baseUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(userData),
+  });
 }
 
 export function deleteUser(userId) {
