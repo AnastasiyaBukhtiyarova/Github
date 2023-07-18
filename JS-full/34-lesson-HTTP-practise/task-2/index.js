@@ -1,19 +1,14 @@
 const baseUrl = 'https://64b53125f3dbab5a95c6e5d0.mockapi.io/resourse';
-function getUsersList() {
-  // put your code here
+
+export function getUsersList() {
   return fetch(baseUrl).then((response) => response.json());
 }
 
 export function getUserById(userId) {
-  // put your code here
-  const user = `${baseUrl}/${userId}`;
-  getUsersList.filter((data) => data.includes(user));
-  //  console.log(user);
-  return user;
+  return fetch(`${baseUrl}/${userId}`).then((response) => response.json());
 }
 
 export function createUser(userData) {
-  // put your code here
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -25,13 +20,25 @@ export function createUser(userData) {
 
 export function deleteUser(userId) {
   // put your code here
+
+  return fetch(`${baseUrl}/${userId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 }
 
 export function updateUser(userId, userData) {
   // put your code here
+  return fetch(`${baseUrl}/${userId}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(userData),
+  });
 }
-
-// examples
 getUsersList().then((users) => {
   console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
 });
@@ -39,7 +46,6 @@ getUsersList().then((users) => {
 getUserById('2').then((userData) => {
   console.log(userData); // {'id':'2', 'firstName':'Ara' ... }
 });
-
 const newUserData = {
   email: 'cool@email.com',
   firstName: 'Iron',
