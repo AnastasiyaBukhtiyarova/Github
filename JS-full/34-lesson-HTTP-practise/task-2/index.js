@@ -23,9 +23,6 @@ export function deleteUser(userId) {
 
   return fetch(`${baseUrl}/${userId}`, {
     method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
   });
 }
 
