@@ -1,43 +1,39 @@
-/*
- * ф-ция makePromise должна вернуть промис со значением переданным в ф-цию
- */
+import { fetchUserData, fetchRepositories } from './gateways.js';
+import { renderRepos, clearReposList } from './repos.js';
+import { renderUserData } from './user.js';
+import { showSpinner, hideSpinner } from './spinner.js';
 
-const makePromise = (number) => {
-  const p = new Promise((resolve) => {
-    resolve(number);
-  });
-  return p;
+const defaultUser = {
+  avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+  name: '',
+  location: '',
 };
-/*
- * пример использования
- */
-makePromise(17).then((number) => {
-  console.log(number); // 17
-});
-//part 2
+renderUserData(defaultUser);
+const showUserBtnElem = document.querySelector('.name-form__btn');
+const userNameInputElem = document.querySelector('.name-form__input');
+const listElem = document.querySelector('.repo-list');
+const onSearchUser = () => {
+  showSpinner();
+  clearReposList();
+  listElem.innerHTML = '';
+  const userName = userNameInputElem.value;
+  fetchUserData(userName)
+    .then((userData) => {
+      renderUserData(userData);
+      return userData.repos_url;
+    })
+    .then((url) => {
+      return fetchRepositories(url);
+    })
+    .then((reposList) => {
+      renderRepos(reposList);
+    })
 
-const promiseNumber1 = 67;
-const promiseNumber2 = 23;
-const promiseNumber3 = 8;
-
-/*
- * создай промис и присвой переменной resultPromise
- * чтобы в консоль вывелась сумма всех чисел из трех промисов
- */
-
-// update code below
-
-// export
-const resultPromise = new Promise((resolve) => {
-  resolve([promiseNumber1, promiseNumber2, promiseNumber3]);
-});
-
-resultPromise
-  .then((numbersList) => {
-    console.log(numbersList);
-    const sum = numbersList.reduce((acc, num) => acc + num, 0);
-    return sum;
-  })
-  .then((result) => {
-    console.log(result); // 98
-  });
+    .catch((err) => {
+      alert(err.message);
+    })
+    .finally(() => {
+      hideSpinner();
+    });
+};
+showUserBtnElem.addEventListener('click', onSearchUser);
