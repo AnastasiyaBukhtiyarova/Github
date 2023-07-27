@@ -12,28 +12,21 @@ renderUserData(defaultUser);
 const showUserBtnElem = document.querySelector('.name-form__btn');
 const userNameInputElem = document.querySelector('.name-form__input');
 const listElem = document.querySelector('.repo-list');
-const onSearchUser = () => {
+const onSearchUser = async () => {
   showSpinner();
   clearReposList();
   listElem.innerHTML = '';
   const userName = userNameInputElem.value;
-  fetchUserData(userName)
-    .then((userData) => {
-      renderUserData(userData);
-      return userData.repos_url;
-    })
-    .then((url) => {
-      return fetchRepositories(url);
-    })
-    .then((reposList) => {
-      renderRepos(reposList);
-    })
-
-    .catch((err) => {
-      alert(err.message);
-    })
-    .finally(() => {
-      hideSpinner();
-    });
+  try {
+    const userData = await fetchUserData(userName);
+    renderUserData(userData);
+    const reposList = await fetchRepositories(userData.repos_url);
+    renderRepos(reposList);
+  } catch (err) {
+    alert(err.message);
+  } finally {
+    hideSpinner();
+  }
 };
+
 showUserBtnElem.addEventListener('click', onSearchUser);
