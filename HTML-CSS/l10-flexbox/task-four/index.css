@@ -1,0 +1,62 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex-grow: 1;
+}
+header {
+   display: flex;
+ align-items: center;
+  height: 40px;
+  background-color: yellow;
+}
+
+.list {
+ padding: 0;
+  display: flex;
+  list-style: none;
+}
+.list-nav {
+   display: flex;
+ align-items: center;
+  margin-left: 16px;
+}
+.content {
+  display: flex;
+  flex-grow: 1;
+}
+section {
+  display: flex;
+  flex-grow: 1;
+  background-color: pink;
+}
+h2 {
+  margin: auto;
+}
+aside {
+  background-color: grey;
+  width: 200px;
+}
+.news {
+  display: flex;
+  justify-content: center;
+   margin-top: 16px;
+  margin-bottom: 32px;
+}
+.news-ul {
+padding-top: 16px;
+margin-left: 16px;
+  padding: 0;
+  list-style: none;
+}
+li {
+    height: 40px;
+}
+footer {
+ display: flex;
+  background-color: green;
+  height: 40px;
+}
+.footer-content {
+   margin: auto;
+}

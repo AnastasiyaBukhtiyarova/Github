@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+.block_red {
+  background-color: red;
+  display: inline-block;
+  height: 200px;
+  width: 20%;
+ float: left;
+}
+.block_green {
+  background-color: green;
+  display: inline-block;
+  height: 200px;
+  width: 20%;
+  float: left;
+ 
+}
+.block_blue {
+  background-color: blue;
+  display: inline-block;
+  height: 200px;
+  width: 20%;
+  float: left;
+}
+.block_yellow {
+  background-color: yellow;
+  display: inline-block;
+  height: 200px;
+  width: 20%;
+  float: left;
+}
+
+.block_black {
+  background-color: black;
+  display: inline-block;
+  height: 200px;
+  width: 20% ;
+  float: left;
+}
