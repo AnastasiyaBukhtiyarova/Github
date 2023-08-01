@@ -1,0 +1,20 @@
+{
+  "name": "task-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest -w",
+    "styles:build": "cp ./styles.css ./dist/styles.css",
+    "copy": "cp ./src/index.html ./dist/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.9",
+    "jest": "^29.6.2",
+    "sass": "^1.64.2"
+  }
+}
