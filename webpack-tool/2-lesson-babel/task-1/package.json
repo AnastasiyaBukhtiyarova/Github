@@ -64,6 +64,7 @@
   "devDependencies": {
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/plugin-transform-arrow-functions": "^7.22.5",
     "@babel/plugin-transform-object-rest-spread": "^7.22.5",
     "@babel/plugin-transform-spread": "^7.22.5",
