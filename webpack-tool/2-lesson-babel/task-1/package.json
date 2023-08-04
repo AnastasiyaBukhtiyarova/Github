@@ -66,6 +66,7 @@
     "@babel/core": "^7.22.9",
     "@babel/plugin-transform-arrow-functions": "^7.22.5",
     "@babel/plugin-transform-object-rest-spread": "^7.22.5",
+    "@babel/plugin-transform-spread": "^7.22.5",
     "@babel/plugin-transform-template-literals": "^7.22.5"
   },
   "scripts": {
