@@ -74,8 +74,9 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest -w",
-    "styles:build": "sass ./src/styles/index.scss ./dist/styles.css",
-    "copy": "cp ./src/index.html ./dist/index.html"
+    "build:styles": "sass ./src/styles/index.scss ./dist/styles.css",
+    "build:html": "cp ./src/index.html ./dist/index.html",
+    "build:scripts": "cp -R ./src/scripts ./dist/scripts"
   },
   "keywords": [],
   "author": "",
