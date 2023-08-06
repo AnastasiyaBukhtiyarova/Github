@@ -7,7 +7,6 @@
     "test": "jest",
     "test:watch": "jest -w",
     "build:styles": "sass ./src/index.scss ./dist/styles.css",
-    "copy:html": "cpi index.html distindex.html",
     "copy:scripts": "cp -R ./src/scripts ./dist/scripts"
   },
   "keywords": [],
