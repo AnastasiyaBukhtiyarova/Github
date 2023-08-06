@@ -7,14 +7,22 @@
     "test": "jest",
     "test:watch": "jest -w",
     "build:styles": "sass ./src/index.scss ./dist/styles.css",
-    "copy:scripts": "cp -R ./src/scripts ./dist/scripts"
+    "copy:scripts": "cp -R ./src/scripts ./dist/scripts",
+     "build": "npm-run-all clean build: * copy: *"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "jest": "^29.6.2",
     "sass": "^1.64.2"
+   
+  },
+  "dependencies": {
+    "core-js": "^3.32.0",
+    "run-all": "^1.0.1"
   }
 }
