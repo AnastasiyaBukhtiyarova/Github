@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:scripts": "webpack --mode=development",
+    "build:scripts": "webpack --mode=production",
     "watch:scripts": "webpack --devtool eval-source-map --watch"
   },
   "keywords": [],
