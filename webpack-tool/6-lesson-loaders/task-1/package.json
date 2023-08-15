@@ -7,20 +7,25 @@
     "build": "webpack --mode=production",
     "watch": "webpack --mode=development --devtool eval-source-map -w",
     "build:css:profile": "sass ./src/profile/profile.scss ./dist/profile.css ",
-    "build:css": "sass ./src/index.scss ./dist/index.css"
+    "build:css": "sass ./src/index.scss ./dist/index.css",
+    "build:html": "cp ./src/index.html ./dist/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clean": "^4.0.2",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "fileloader": "^2.0.0",
-    "image-loader": "^0.0.1",
+    "html-loader": "^4.2.0",
     "sass": "^1.65.1",
     "style-loader": "^3.3.3",
     "url-loader": "^4.1.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "image-webpack-loader": "^8.1.0"
   }
 }
