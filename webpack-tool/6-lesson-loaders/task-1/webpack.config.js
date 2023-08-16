@@ -21,6 +21,7 @@ module.exports = {
           options: {
             limit: 8192,
             fileName: '[name].[ext]',
+            outputPath: 'images',
           },
         },
       },
