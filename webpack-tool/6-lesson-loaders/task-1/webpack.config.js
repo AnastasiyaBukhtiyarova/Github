@@ -16,7 +16,8 @@ module.exports = {
         test: /.(jpg|png)$/,
         type: 'asset/resource',
         use: {
-          loader: 'image-webpack-loader',
+          //  loader: 'image-webpack-loader',
+          loader: 'url-loader',
           options: {
             limit: 8192,
             fileName: '[name].[ext]',
