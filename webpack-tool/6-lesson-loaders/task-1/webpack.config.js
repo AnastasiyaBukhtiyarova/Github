@@ -19,7 +19,7 @@ module.exports = {
           //  loader: 'image-webpack-loader',
           loader: 'url-loader',
           options: {
-            limit: 8192,
+            limit: 8000,
             fileName: '[name].[ext]',
           },
         },
