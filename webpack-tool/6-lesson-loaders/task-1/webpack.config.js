@@ -1,22 +1,25 @@
+const path = require('path');
+
 module.exports = {
-  entry: './src/index.js',
+  entry: ['./src/index.js', './src/profile/profile.scss', './src/index.scss'],
   output: {
     filename: 'bundle.js',
+    assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
   },
   module: {
     rules: [
       {
-        test: /.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /.s?css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /.(jpg|png)$/,
+        type: 'asset/resource',
         use: {
-          loader: 'url-loader',
+          loader: 'image-webpack-loader',
           options: {
-            limit: 8000,
-            filename: '[name].[ext]',
-            output: 'images',
+            limit: 8192,
+            fileName: '[name].[ext]',
           },
         },
       },
