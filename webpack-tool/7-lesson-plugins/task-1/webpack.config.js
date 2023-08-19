@@ -18,7 +18,7 @@ module.exports = {
         type: 'asset/resource',
         use: {
           loader: 'url-loader',
-          
+
           options: {
             limit: 8192,
             fileName: '[name].[ext]',
@@ -30,6 +30,7 @@ module.exports = {
   },
   plugins: [
     new htmlWebpackPlugin({
+      filename: 'index.html',
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
