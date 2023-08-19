@@ -18,6 +18,7 @@ module.exports = {
         type: 'asset/resource',
         use: {
           loader: 'url-loader',
+          
           options: {
             limit: 8192,
             fileName: '[name].[ext]',
