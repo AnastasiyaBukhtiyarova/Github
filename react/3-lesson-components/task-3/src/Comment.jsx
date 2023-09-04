@@ -1,9 +1,16 @@
 import React from 'react';
 import './comment.scss';
+import './index.scss';
 import moment from 'moment';
 
 import UserInfo from './UserInfo';
 
+const rootElement = document.querySelector('#root');
+
+const userInfo = {
+  name: 'Tom',
+  avatartUrl: 'https://avatars1.githubusercontent.com',
+};
 const formatDate = (date) => moment(date).format('DD MMM YYYY');
 
 function Comment(props) {
@@ -17,3 +24,8 @@ function Comment(props) {
 }
 
 export default Comment;
+
+ReactDOM.render(
+  <Comment user={userInfo} text="Good job!" date={new Date()} />,
+  rootElement
+);
