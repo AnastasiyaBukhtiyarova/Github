@@ -1,13 +1,13 @@
 import React from 'react';
+
 import './index.scss';
 import moment from 'moment';
 
-const Greeting = (props) => {
-  const age = moment().diff(props.birthDate, 'years');
+const Greeting = ({ firstName, lastName, birthDate }) => {
+  const age = moment().diff(birthDate, 'years');
   return (
     <div className="greeting">
-      My name is {props.firstName} {props.lastName}. I am {' '}
-      {age} years old
+      {`My name is ${firstName} ${lastName}. I am ${age} years old`}
     </div>
   );
 };
