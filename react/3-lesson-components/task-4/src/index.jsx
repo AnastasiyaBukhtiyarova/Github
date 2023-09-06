@@ -8,7 +8,7 @@ ReactDOM.render(
   <Greeting
     firstName={'John'}
     lastName={'Doe'}
-    birthDate={moment('05092006', 'DDMMYYYY')}
+    birthDate={moment('05091990', 'DDMMYYYY')}
   />,
   rootElement
 );
