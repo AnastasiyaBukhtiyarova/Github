@@ -3,12 +3,12 @@ import React from 'react';
 import moment from 'moment';
 import './index.scss';
 
-const Profile = ({ firstName, lastName, birthDate }) => {
+const Profile = ({ firstName, lastName, birthDate, birthPlace }) => {
   const birth = moment(birthDate).format('DD MMM YY');
   return (
-    <div className='block'>
+    <div className="block">
       <p className="profile__name">{`${firstName} ${lastName}`}</p>
-      <p className="profile__birth">{`Was born ${birth}`}</p>
+      <p className="profile__birth">{`Was born ${birth} in ${birthPlace}`}</p>
     </div>
   );
 };
