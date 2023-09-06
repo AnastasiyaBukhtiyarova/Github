@@ -3,7 +3,8 @@ import React from 'react';
 import moment from 'moment';
 import './index.scss';
 
-const Profile = ({ firstName, lastName, birthDate, birthPlace }) => {
+const Profile = ( userData ) => {
+  const { firstName, lastName, birthDate, birthPlace } = userData;
   const birth = moment(birthDate).format('DD MMM YY');
   return (
     <div className="block">
