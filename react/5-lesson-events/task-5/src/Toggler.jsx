@@ -9,7 +9,7 @@ class Toggler extends Component {
   }
   switchStatus() {
     if (this.state.status === 'Off') {
-      return this.setState({
+   return   this.setState({
         status: 'On',
       });
     }
