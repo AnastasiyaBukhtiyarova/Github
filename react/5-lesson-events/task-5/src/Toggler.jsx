@@ -4,11 +4,11 @@ class Toggler extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: 'off',
+      status: 'Off',
     };
   }
   switchStatus() {
-    if (this.state.status === 'off') {
+    if (this.state.status === 'Off') {
       return this.setState({
         status: 'On',
       });
