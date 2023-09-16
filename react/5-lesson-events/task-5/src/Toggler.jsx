@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ButtonStatus extends Component {
+class Toggler extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,4 +26,4 @@ class ButtonStatus extends Component {
     );
   }
 }
-export default ButtonStatus;
+export default Toggler;
