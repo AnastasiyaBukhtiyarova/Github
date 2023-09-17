@@ -9,7 +9,7 @@ class Toggler extends Component {
   }
   switchStatus() {
     if (this.state.status === 'Off') {
-      return this.setState({
+   return   this.setState({
         status: 'On',
       });
     }
@@ -21,7 +21,7 @@ class Toggler extends Component {
   render() {
     return (
       <div className="toggler" onClick={() => this.switchStatus()}>
-        {this.state.status}
+        *{this.state.status} status here*
       </div>
     );
   }
