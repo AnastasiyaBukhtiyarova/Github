@@ -17,7 +17,6 @@ class Toggler extends Component {
       status: 'Off',
     });
   }
-
   render() {
     return (
       <div className="toggler" onClick={() => this.switchStatus()}>
