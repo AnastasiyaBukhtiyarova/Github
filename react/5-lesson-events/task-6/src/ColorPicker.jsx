@@ -23,20 +23,17 @@ class ColorPicker extends Component {
         <div className="picker__title">{this.state.activeColor}</div>
         <div>
           <button
-            className="pickerbutton pickerbutton_coral"
+            className="picker__button picker__button_coral"
             onMouseEnter={() => this.setTitle('Coral')}
-            onMouseLeave={this.clearTitle}
-          />
+            onMouseLeave={this.clearTitle}></button>
           <button
-            className="pickerbutton pickerbutton_aqua"
+            className="picker__button picker__button_aqua"
             onMouseEnter={() => this.setTitle('Aqua')}
-            onMouseLeave={this.clearTitle}
-          />
+            onMouseLeave={this.clearTitle}></button>
           <button
-            className="pickerbutton pickerbutton_bisque"
+            className="picker__button picker__button_bisque"
             onMouseEnter={() => this.setTitle('Bisque')}
-            onMouseLeave={this.clearTitle}
-          />
+            onMouseLeave={this.clearTitle}></button>
         </div>
       </div>
     );
