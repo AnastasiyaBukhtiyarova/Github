@@ -7,12 +7,12 @@ class Auth extends Component {
       isLoggedIn: false,
     };
   }
-  onLogin() {
+  handleLogIin() {
     return this.setState({
       isLoggedIn: true,
     });
   }
-  onLogout() {
+  handleLogout() {
     return this.setState({
       isLoggedIn: false,
     });
@@ -20,9 +20,9 @@ class Auth extends Component {
   render() {
     let button;
     if (this.state.isLoggedIn) {
-      button = <button onClick={() => this.onLogout()}>Logout</button>;
+      button = <button onClick={() => this.handleLogout()}>Logout</button>;
     } else {
-      button = <button onClick={() => this.onLogin()}>Login</button>;
+      button = <button onClick={() => this.handleLogin()}>Login</button>;
     }
     return (
       <div className="panel">
