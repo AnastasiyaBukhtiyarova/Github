@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { StrictMode } from 'react';
 import Login from './Login';
 import Logout from './Logout';
 import Greeting from './Greeting';
@@ -14,34 +13,30 @@ class Auth extends Component {
     };
   }
 
-  handleLogin = function handleLogIin() {
+  handleLogIin() {
     return this.setState({
       isLoggedIn: true,
     });
-  };
-  handleLogout = function handleLogout() {
+  }
+  handleLogout() {
     return this.setState({
       isLoggedIn: false,
     });
-  };
+  }
 
   render() {
-    let button;
-    /* if (this.state.isLoggedIn) {
-      button = <button onClick={() => this.handleLogout()}>Logout</button>;
-    } else {
-      button = <button onClick={() => this.handleLogin()}>Login</button>;
-    }
-    */
-    if (this.state.isLoggedIn) {
-      button = <Logout />;
-    } else {
-      button = <Login />;
-    }
+  
+
     return (
       <div className="panel">
         <Greeting isLoggedIn={this.state.isLoggedIn} />
-        <div>{button}</div>
+        <div>
+          {this.state.isLoggedIn ? (
+            <Logout onLogout={() => this.handleLogout()} />
+          ) : (
+            <Login onLogin={() => this.handleLogIin()} />
+          )}
+        </div>
       </div>
     );
   }
