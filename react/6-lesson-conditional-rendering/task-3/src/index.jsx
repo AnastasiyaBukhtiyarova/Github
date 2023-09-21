@@ -1,7 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import Mailbox from './Mailbox';
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 
-const rootElement = document.querySelector('#root');
-ReactDOM.render(<Mailbox UnreadMessages={[5]} />, rootElement);
+import Page from './Page';
+
+const root = createRoot(document.getElementById('app'));
+
+root.render(
+  <StrictMode>
+    <Page />
+  </StrictMode>
+);
