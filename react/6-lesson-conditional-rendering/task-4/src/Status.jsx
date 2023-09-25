@@ -4,12 +4,13 @@ import Offline from './Offline';
 class Status extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    /* this.state = {
       isOnline: false,
     };
+    */
   }
   render() {
-    if (this.state.isOnline) {
+    if (this.props.isOnline) {
       return <Online />;
     }
     return <Offline />;
