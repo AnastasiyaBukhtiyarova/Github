@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Auth from './Auth';
+import Mailbox from './Mailbox';
 
 const rootElement = document.querySelector('#root');
-ReactDOM.render(<Auth />, rootElement);
+ReactDOM.render(<Mailbox UnreadMessanges={[5]} />, rootElement);
