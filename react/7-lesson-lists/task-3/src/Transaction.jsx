@@ -9,9 +9,7 @@ const Transaction = ({ from, to, amount, rate, time }) => {
       <span className="transaction__rate">{rate}</span>
       <span className="transaction__amount">
         {' '}
-        {new Intl.NumberFormat('en-GB', { SignificantDigits: 3 }).format(
-          amount
-        )}
+        {new Intl.NumberFormat('en-GB').format(amount)}
       </span>
     </li>
   );
