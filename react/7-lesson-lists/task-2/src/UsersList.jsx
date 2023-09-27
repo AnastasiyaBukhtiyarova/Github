@@ -11,15 +11,15 @@ class UsersList extends Component {
     });
   };
   render() {
-    let usersList;
+    let usersList = this.props.users.slice();
     if (this.state.sorting) {
       usersList = this.props.users.sort((a, b) =>
-        this.state.sorting === 'asc' ? b.age - a.age : a.age - b.age
+        this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age
       );
     } else {
       usersList = this.props.users;
     }
-
+    console.log(usersList);
     return (
       <>
         <div>
@@ -29,7 +29,7 @@ class UsersList extends Component {
         </div>
         <ul className="users">
           {this.props.users.map((user) => (
-            <User name={user.name} {...user} />
+            <User {...user} />
           ))}
         </ul>
       </>
