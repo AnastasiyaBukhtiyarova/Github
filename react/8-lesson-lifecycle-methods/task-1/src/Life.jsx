@@ -12,13 +12,13 @@ class Life extends Component {
     console.log(
       'shouldComponentUpdate(nextProps, nextState): decide to render or not to render'
     );
-    return true;
+    return nextProps.number % 2;
   }
   componentDidUpdate(prevProps, prevState) {
     console.log(
       'componentDidUpdate(prevProps, prevState): some updates based on new props'
     );
-    return prevProps.number;
+    return prevProps.number % 2;
   }
   componentWillUnmount() {
     console.log(
