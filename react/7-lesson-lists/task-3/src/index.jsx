@@ -1,5 +1,6 @@
-import React, { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom';
+//import { createRoot } from 'react-dom/client';
 import './index.scss';
 import TransactionsList from './TransactionsList';
 
@@ -30,10 +31,6 @@ const transactions = [
   },
 ];
 
-const root = createRoot(document.getElementById('app'));
+const root = document.querySelector('#root');
 
-root.render(
-  <StrictMode>
-    <TransactionsList transactions={transactions} />
-  </StrictMode>
-);
+ReactDOM.render(<TransactionsList transactions={transactions} />, root);

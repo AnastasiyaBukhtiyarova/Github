@@ -8,18 +8,17 @@ class Life extends Component {
   componentDidMount() {
     console.log('componentDidMount: API calls, subscriptions');
   }
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate() {
     console.log(
       'shouldComponentUpdate(nextProps, nextState): decide to render or not to render'
     );
-    return nextProps.number % 2;
+    return true;
   }
-  componentDidUpdate(prevProps, prevState) {
-    if (this.props.number % 2 !== prevProps.number % 2) {
-      console.log(
-        'componentDidUpdate(prevProps, prevState): some updates based on new props'
-      );
-    }
+
+  componentDidUpdate() {
+    console.log(
+      'componentDidUpdate(prevProps, prevState): some updates based on new props'
+    );
   }
   componentWillUnmount() {
     console.log(
