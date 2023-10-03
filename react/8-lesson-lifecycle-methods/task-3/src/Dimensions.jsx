@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-class Dimensions extends Component {
-  state = {
-    width: null,
-    heigth: null,
-  };
+class Dimension extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width:innerWidth,
+      heigth: innerHeight,
+    };
+      document.title = `${innerWidth} Х ${innerHeight}`;
+  }
+
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
     const { innerWidth, innerHeight } = window;
@@ -33,4 +38,4 @@ class Dimensions extends Component {
     );
   }
 }
-export default Dimensions;
+export default Dimension;
