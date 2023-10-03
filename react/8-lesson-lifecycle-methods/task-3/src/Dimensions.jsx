@@ -15,7 +15,7 @@ class Dimension extends Component {
     this.setDimensions(innerWidth, innerHeight);
   };
   setDimensions = (width, height) => {
-    document.title = `${innerWidth} Х ${innerHeight}`;
+    document.title = `${innerWidth} х ${innerHeight}`;
     this.setState({
       width,
       height,
