@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
-class Dimensions extends Component {
- state = {
-      width:null,
-      heigth: null,
-    };
-  
+class Dimension extends Component {
+  state = {
+    width: null,
+    heigth: null,
+  };
 
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
     const { innerWidth, innerHeight } = window;
     this.setDimensions(innerWidth, innerHeight);
-    
   }
   onResize = (e) => {
     const { innerWidth, innerHeight } = e.target;
     this.setDimensions(innerWidth, innerHeight);
   };
   setDimensions = (width, height) => {
+    document.title = `${innerWidth} Х ${innerHeight}`;
     this.setState({
       width,
       height,
     });
-    document.title = `${innerWidth} Х ${innerHeight}`;
   };
 
   componentWillUnmount() {
@@ -33,4 +31,4 @@ class Dimensions extends Component {
     );
   }
 }
-export default Dimensions;
+export default Dimension;
