@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 class Dimension extends Component {
   state = {
     width: null,
-    heigth: null,
+    height: null,
   };
 
   componentDidMount() {
@@ -15,11 +15,11 @@ class Dimension extends Component {
     this.setDimensions(innerWidth, innerHeight);
   };
   setDimensions = (width, height) => {
-    document.title = `${innerWidth} х ${innerHeight}`;
     this.setState({
       width,
       height,
     });
+    document.title = `${innerWidth} х ${innerHeight}`;
   };
 
   componentWillUnmount() {
