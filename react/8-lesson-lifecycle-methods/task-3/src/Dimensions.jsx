@@ -19,16 +19,15 @@ class Dimension extends Component {
       width,
       height,
     });
-    document.title = `${innerWidth} х ${innerHeight}`;
+    document.title = `${width} х ${height}`;
   };
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
   }
   render() {
-    return (
-      <div className="dimensions">{`${this.state.width}px - ${this.state.height}px`}</div>
-    );
+    const { width, height } = this.state;
+    return <div className="dimensions">{`${width}px - ${height}px`}</div>;
   }
 }
 export default Dimension;
