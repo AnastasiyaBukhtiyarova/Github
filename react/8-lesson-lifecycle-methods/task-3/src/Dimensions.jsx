@@ -26,8 +26,8 @@ class Dimension extends Component {
     window.removeEventListener('resize', this.onResize);
   }
   render() {
-    const { width, height } = this.state;
-    return <div className="dimensions">{`${width}px - ${height}px`}</div>;
+    //const { width, height } = this.state;
+    return <div className="dimensions">{`${innerWidth}px - ${innerHeight}px`}</div>;
   }
 }
 export default Dimension;
