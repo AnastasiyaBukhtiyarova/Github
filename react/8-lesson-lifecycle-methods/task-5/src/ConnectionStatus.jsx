@@ -3,7 +3,7 @@ import './index.scss';
 
 class ConnectionStatus extends Component {
   state = {
-    status: 'online',
+    status: true,
   };
 
   componentDidMount() {
@@ -18,8 +18,13 @@ class ConnectionStatus extends Component {
       });
     });
   }
+
   render() {
-    return <div className="status status_offline">{this.state.status}</div>;
+    return (
+      <div className="status status_offline">
+        {this.state.status ? 'online' : 'offline'}
+      </div>
+    );
   }
 }
 export default ConnectionStatus;
