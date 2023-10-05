@@ -18,9 +18,17 @@ class ConnectionStatus extends Component {
       });
     });
   }
-  componentDidMount() {
-    window.removeEventListener('online');
-    window.removeEventListener('offline');
+  componentWillUnmount() {
+    window.removeEventListener('online', () => {
+      this.setState({
+        status: true,
+      });
+    });
+    window.removeEventListener('offline', () => {
+      this.setState({
+        status: false,
+      });
+    });
   }
 
   render() {
