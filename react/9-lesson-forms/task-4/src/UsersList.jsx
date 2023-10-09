@@ -11,9 +11,6 @@ class UsersList extends Component {
     let users = this.props.users.filter((user) =>
       user.name.toLowerCase().match(event.target.value.toLowerCase())
     );
-
-    console.log(users);
-
     this.setState({
       value: event.target.value,
       filteredUser: users,
