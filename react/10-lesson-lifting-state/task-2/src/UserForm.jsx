@@ -6,6 +6,7 @@ const UserForm = ({ userData, handleChange }) => {
         type="text"
         name="firstName"
         className="user-form__input"
+      
         value={userData.firstName}
         onChange={handleChange}
       />
@@ -13,6 +14,7 @@ const UserForm = ({ userData, handleChange }) => {
         type="text"
         name="lastName"
         className="user-form__input"
+        
         value={userData.lastName}
         onChange={handleChange}
       />
