@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import UserForm from './UserForm';
-const Profile = ({ userData, handleChange }) => {
+const Profile = ({ firstName, lastName, handleChange }) => {
   return (
     <div className="column">
-      <UserForm userData={userData} handleChange={handleChange} />
+      <UserForm firstName={firstName} lastName={lastName} handleChange={handleChange} />
     </div>
   );
 };
