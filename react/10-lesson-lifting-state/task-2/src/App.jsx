@@ -12,20 +12,20 @@ class Page extends Component {
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({
-      ...this.props.userData,
-      [name]: value,
+      userData: {
+        ...this.state.userData,
+        [name]: value,
+      },
     });
   };
   render() {
+    const { userData } = this.state;
     return (
       <div className="page">
+        <h1>{`Hello, ${userData.firstName}  ${userData.lastName}`}</h1>
         <main className="content">
-        
-          <ShoppingCart userData={this.state.userData} />
-          <Profile
-            userData={this.state.userData}
-            handleChange={this.handleChange}
-          />
+          <ShoppingCart userData={userData} />
+          <Profile userData={userData} handleChange={this.handleChange} />
         </main>
       </div>
     );
