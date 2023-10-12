@@ -22,7 +22,7 @@ class Page extends Component {
     const { userData } = this.state;
     return (
       <div className="page">
-        <h1 className='title'>{`Hello, ${userData.firstName}  ${userData.lastName}`}</h1>
+        <h1 className='title'>{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
         <main className="content">
           <ShoppingCart userName={userData.firstName} />
           <Profile firstName={userData.firstName} lastName={userData.lastName} handleChange={this.handleChange} />
