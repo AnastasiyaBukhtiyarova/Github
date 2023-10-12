@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 class ProductsList extends Component {
   render() {
-    if (this.props.userData) {
-      return null;
-    }
     const total = this.props.cartItems.reduce(
       (acc, item) => acc + item.price,
       0
@@ -15,7 +12,7 @@ class ProductsList extends Component {
           {this.props.cartItems.map(({ id, name, price }) => (
             <li key={id} className="products__list-item">
               <span className="products__item-name">{name}</span>
-              <span className="products__item-price">$ {price}</span>
+              <span className="products__item-price">${price}</span>
             </li>
           ))}
         </ul>
