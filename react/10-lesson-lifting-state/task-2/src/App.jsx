@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ShoppingCart from './ShoppingCart';
 import Profile from './Profile';
 import ProductsList from './ProductsList';
-class Page extends Component {
+class App extends Component {
   state = {
     userData: {
       firstName: 'Tom',
@@ -31,4 +31,4 @@ class Page extends Component {
     );
   }
 }
-export default Page;
+export default App;
