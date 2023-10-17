@@ -7,57 +7,33 @@ class Expand extends Component {
   state = {
     hiddenChildren: false,
   };
-  hideChildren = () => {
+  toggleButton = () => {
     this.setState({
-      hiddenChildren: false,
+      hiddenChildren: !this.state.hiddenChildren,
     });
   };
-  showChildren = () => {
-    this.setState({
-      hiddenChildren: true,
-    });
-  };
+
   render() {
     const { title, children } = this.props;
-
     return (
       <div className="expand border">
         <div className="expand__header">
           <span className="expand__title">{title}</span>
 
-          {this.state.hiddenChildren ? (
-            <button className="expand__toggle-btn">
-              {' '}
-              <FontAwesomeIcon icon="chevron-up" onClick={this.hideChildren} />
-            </button>
-          ) : (
-            <button className="expand__toggle-btn">
-              <FontAwesomeIcon
-                icon="chevron-down"
-                onClick={this.showChildren}
-              />
-            </button>
-          )}
+          <button className="expand__toggle-btn" onClick={this.toggleButton}>
+            {this.state.hiddenChildren ? (
+              <FontAwesomeIcon icon="chevron-up" />
+            ) : (
+              <FontAwesomeIcon icon="chevron-down" />
+            )}
+          </button>
         </div>
-
-        {this.state.hiddenChildren ? (
+        {this.state.hiddenChildren && (
           <div className="expand__content">{children}</div>
-        ) : null}
+        )}
       </div>
     );
   }
 }
 
 export default Expand;
-/*<button className="expand__toggle-btn" onClick={this.showChildren}>
-            {this.state.hiddenChildren ? (
-              <FontAwesomeIcon icon="chevron-up" onClick={this.hideChildren} />
-            ) : (
-              <FontAwesomeIcon
-                icon="chevron-down"
-                onClick={this.showChildren}
-              />
-            )}
-          </button>
-        </div>
-*/
