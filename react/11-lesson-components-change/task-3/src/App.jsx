@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import Expand from './Expand';
 class App extends Component {
   render() {
