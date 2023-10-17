@@ -23,9 +23,9 @@ class Expand extends Component {
 
           <button className="expand__toggle-btn" onClick={this.toggleButton}>
             {this.state.hiddenChildren ? (
-              <i class="fas fa-chevron-up" />
+              <i class="fas fa-chevron-up"></i>
             ) : (
-              <i class="fas fa-chevron-down" />
+              <i class="fas fa-chevron-down"></i> 
             )}
           </button>
         </div>
