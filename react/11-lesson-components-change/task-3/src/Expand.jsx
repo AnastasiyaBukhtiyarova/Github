@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-/*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 library.add(faChevronUp, faChevronDown);
-*/
+
 class Expand extends Component {
   state = {
     hiddenChildren: false,
@@ -23,9 +23,9 @@ class Expand extends Component {
 
           <button className="expand__toggle-btn" onClick={this.toggleButton}>
             {this.state.hiddenChildren ? (
-              <i class="fas fa-chevron-up"></i>
+              <FontAwesomeIcon icon="chevron-up" />
             ) : (
-              <i class="fas fa-chevron-down"></i> 
+              <FontAwesomeIcon icon="chevron-down" />
             )}
           </button>
         </div>
