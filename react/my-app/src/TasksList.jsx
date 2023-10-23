@@ -20,7 +20,7 @@ class TodoList extends Component {
   fetchTasks = () => {
     fetchTasksList().then((tasksList) => {
       this.setState({
-        tasksList,
+        tasks:tasksList,
       });
     });
   };
