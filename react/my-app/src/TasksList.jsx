@@ -39,7 +39,7 @@ class TodoList extends Component {
         text,
         done: !done,
       };
-      return updateTask(id, updatedTask).then(() => this.fetchTasks());
+      updateTask(id, updatedTask).then(() => this.fetchTasks());
     }
   };
 
