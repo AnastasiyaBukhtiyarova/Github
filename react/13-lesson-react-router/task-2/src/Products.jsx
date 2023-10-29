@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from './Product';
 import { Switch, Route, Link } from 'react-router-dom';
-const Products = ({match}) => {
+const Products = ({ match }) => {
   return (
     <div className="page__content">
       <h1>Products</h1>
@@ -17,7 +17,9 @@ const Products = ({match}) => {
         <Route exact path={`${match.url}`}>
           <span>Select a product please</span>
         </Route>
-        <Route path={`${match.url}/:productId`} component={Product} />
+        <Route path={`${match.url}/:productId`}>
+          <Product />
+        </Route>
       </Switch>
     </div>
   );
