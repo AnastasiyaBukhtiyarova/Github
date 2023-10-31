@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import User from './User';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="page">
         <div className="page__content">
           <h1>Users</h1>
@@ -17,17 +17,18 @@ const App = () => {
             </li>
           </ul>
 
-           <Switch> 
-            <Route exact path="/users/:userId" component={User}/>
-            
-            
+          <Switch>
+            <Route path="/users/:userId">
+              <User />
+            </Route>
+
             <Route path="/">
               <span>Select a user please</span>
             </Route>
-          </Switch> 
+          </Switch>
         </div>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 export default App;
