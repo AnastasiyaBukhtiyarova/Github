@@ -2,21 +2,22 @@ import React, { useEffect, useState } from 'react';
 import './index.scss';
 
 const ConnectionStatus = () => {
-  const [connection, setConnection] = useState({ status: true });
-  useEffect(() => {
-    const handleConnection = () => {
-      if (window.navigator.onLine) {
-        setConnection({ status: true });
-      } else {
-        setConnection({ status: false });
-      }
-    };
+  const [status, setStatus] = useState(true);
 
-    handleConnection();
-  }, [connection]);
-      
-  
-  const { status } = connection;
+  const setOnline = () => setStatus(true);
+  const setOffline = () => setStatus(false);
+
+  useEffect(() => {
+    window.addEventListener('online', setOnline);
+    window.addEventListener('offline', setOffline);
+
+    return () => {
+      window.removeEventListener('online', setOnline);
+      window.removeEventListener('offline', setOffline);
+    };
+  }, []);
+
+
   return (
     <div className="status status_offline">{status ? 'online' : 'offline'}</div>
   );
