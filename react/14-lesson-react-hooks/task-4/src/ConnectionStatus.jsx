@@ -3,23 +3,19 @@ import './index.scss';
 
 const ConnectionStatus = () => {
   const [connection, setConnection] = useState({ status: true });
-  console.log(connection);
   useEffect(() => {
     const handleConnection = () => {
-      if (connection) {
-        window.addEventListener('connection', () => {
-          setConnection({ status: true });
-        });
-      }
-      window.addEventListener('connection', () => {
+      if (window.navigator.onLine) {
+        setConnection({ status: true });
+      } else {
         setConnection({ status: false });
-      });
+      }
     };
 
-    return () => {
-      window.removeEventListener('connection', handleConnection);
-    };
-  }, []);
+    handleConnection();
+  }, [connection]);
+      
+  
   const { status } = connection;
   return (
     <div className="status status_offline">{status ? 'online' : 'offline'}</div>
