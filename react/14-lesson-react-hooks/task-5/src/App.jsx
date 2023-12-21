@@ -3,29 +3,6 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import Clock from './Clock';
-// const App = ({ match }) => {
-//   const { location, offset } = useParams();
-//   console.log(match);
-
-//   const [visible, setVisible] = useState({ visible: true });
-
-//   useEffect(() => {
-//     const toggle = () => {
-//       setVisible({ visible: !visible });
-//     };
-//   }, []);
-
-//   return (
-//     <div>
-//       {/* <button onClick={toggle}>Toggle</button> */}
-//       <div>
-//         {visible && <Clock location={'London'} offset={0} />}
-
-//         {visible && <Clock location={'Kyiv'} offset={2} />}
-//       </div>
-//     </div>
-//   );
-// };
 
 class App extends Component {
   constructor(props) {
