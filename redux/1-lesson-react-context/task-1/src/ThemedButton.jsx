@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {ThemeContext} from './themes-context.js';
+import { ThemeContext } from './themes-context.js';
 class ThemedButton extends React.Component {
   render() {
-    
     return (
       <button
         {...this.props}
@@ -15,4 +14,5 @@ class ThemedButton extends React.Component {
     );
   }
 }
-export default ThemedButton.contextType = ThemeContext;
+ThemedButton.contextType = ThemeContext;
+export default ThemedButton
