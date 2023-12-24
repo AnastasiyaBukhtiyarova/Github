@@ -1,6 +1,6 @@
 import React from 'react';
 export const userData = {
-  name: 'google',
-  avatarUrl: 'https://avatars.githubusercontent.com/u/1342004?v=4',
+  name: 'Nikola Tesla',
+  avatarUrl: 'https://avatars3.githubusercontent.com/u10001',
 };
 export const Users = React.createContext({});
