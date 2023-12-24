@@ -1,15 +1,9 @@
 import React from 'react';
 
 const userData = {
-  user1: {
-    name: 'google',
-    avatarUrl: 'https://api.github.com/users/google',
-  },
-  user2: {
-    name: 'github',
-    avatar: 'https://api.github.com/users/github',
-  },
+  name: 'google',
+  avatarUrl: 'https://avatars.githubusercontent.com/u/1342004?v=4',
 };
 export default userData;
 
-export const users = React.createContext({});
+export const Users = React.createContext({});

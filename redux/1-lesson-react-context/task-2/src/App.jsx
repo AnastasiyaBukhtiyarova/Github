@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import { users } from './context.js';
+import userData, { Users } from './context.js';
 class App extends Component {
   state = {
-    users,
+    user: userData,
   };
+
   render() {
+
     return (
-      <div className="page">
-        <Header></Header>
-      </div>
+      <Users.Provider value={this.state.user}>
+        <div className="page">
+          <Header></Header>
+        </div>
+      </Users.Provider>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UserMenu from './UserMenu';
+import { Users } from './context.js';
 class Header extends Component {
   render() {
     return (
@@ -10,3 +11,4 @@ class Header extends Component {
   }
 }
 export default Header;
+
