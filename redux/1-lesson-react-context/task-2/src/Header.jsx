@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import UserMenu from './UserMenu';
-import { Users } from './context.js';
-class Header extends Component {
+
+class Header extends React.Component {
   render() {
     return (
       <header className="header">
@@ -10,5 +10,5 @@ class Header extends Component {
     );
   }
 }
-export default Header;
 
+export default Header;
