@@ -1,8 +1,9 @@
 import { createStore } from 'redux';
-import './index.scss';
+
 const INCREMENT = 'COUNTER/INCREMENT';
 const DECREMENT = 'COUNTER/DECREMENT';
 const RESET = 'COUNTER/RESET';
+
 export const increment = () => {
   return {
     type: INCREMENT,
@@ -14,30 +15,33 @@ export const decrement = () => {
     type: DECREMENT,
   };
 };
+
 export const reset = () => {
   return {
     type: RESET,
   };
 };
+
 const initialState = {
+  value: 0,
   history: [],
 };
-export const counterReducer = (state = initialState, action) => {
+
+const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return {
-        ...state,
-        history: state.history.concat(1),
+        value: state.value + 1,
+        history: state.history.concat('+1'),
       };
     case DECREMENT:
       return {
-        ...state,
-
-        history: state.history.concat(-1),
+        value: state.value - 1,
+        history: state.history.concat('-1'),
       };
     case RESET:
       return {
-        ...state,
+        value: 0,
         history: [],
       };
     default:
