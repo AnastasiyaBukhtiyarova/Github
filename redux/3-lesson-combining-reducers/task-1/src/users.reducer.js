@@ -7,7 +7,7 @@ const userReducer = (state = initialState, action) => {
     case ADD_USER:
       return {
         ...state,
-        usersList: state.usersList.concat(action.payload),
+        usersList: state.usersList.concat(action.payload.userData),
       };
 
     case DELETE_USER: {
@@ -27,9 +27,8 @@ const userReducer = (state = initialState, action) => {
             ...user,
             ...action.payload.userData,
           };
-        } else {
-          return newList;
         }
+        return user;
       });
       return {
         ...state,
