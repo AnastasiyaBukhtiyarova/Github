@@ -27,8 +27,9 @@ const userReducer = (state = initialState, action) => {
             ...user,
             ...action.payload.userData,
           };
+        } else {
+          return newList;
         }
-        return newList;
       });
       return {
         ...state,
@@ -38,4 +39,4 @@ const userReducer = (state = initialState, action) => {
       return state;
   }
 };
-export default userReducer
+export default userReducer;
