@@ -16,11 +16,7 @@ export const decrement = () => {
   };
 };
 
-export const reset = () => {
-  return {
-    type: RESET,
-  };
-};
+
 
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
