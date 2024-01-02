@@ -10,3 +10,4 @@ store.dispatch(setUser({ name: 'Sara', userId: 2 }));
 store.dispatch(removeUser(1));
 store.dispatch(setLanguage('ua'));
 store.dispatch(addProduct({ name: 'milk', id: 1 }));
+store.dispatch(setUser({ name: 'Tasha', userId: 3 }));
