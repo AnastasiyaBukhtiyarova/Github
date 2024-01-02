@@ -1,17 +1,16 @@
-export const ADD_PRODUCT = 'PRODUCTS/ADD_PRODUCTS';
-export const REMOVE_PRODUCT = 'PRODUCTS/REMOVE_PRODUCTS';
+export const ADD_PRODUCT = 'CART/ADD_PRODUCT';
+export const REMOVE_PRODUCT = 'CART/REMOVE_PRODUCT';
 
-export const addProduct = (productsList) => {
+export const addProduct = (product) => {
   return {
     type: ADD_PRODUCT,
-    payload: {
-      productsList,
-    },
+    payload: [product],
   };
 };
-export const removeProduct = (id) => {
+
+export const removeProduct = (productId) => {
   return {
     type: REMOVE_PRODUCT,
-    payload: { id },
+    payload: productId,
   };
 };

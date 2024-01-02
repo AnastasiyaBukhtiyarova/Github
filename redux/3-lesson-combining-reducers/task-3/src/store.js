@@ -1,7 +1,8 @@
 import { createStore, combineReducers } from 'redux';
-import { languageReducer } from './language.reducer.js';
-import cartReducer from './cart.reducer.js';
+import cartReducer from './cart.reducer';
+import languageReducer from './language.reducer';
 import userReducer from './user.reducer';
+
 const appReducer = combineReducers({
   cart: cartReducer,
   language: languageReducer,
