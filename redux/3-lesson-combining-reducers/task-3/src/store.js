@@ -3,10 +3,11 @@ import { languageReducer } from './language.reducer.js';
 import cartReducer from './cart.reducer.js';
 import userReducer from './user.reducer';
 const appReducer = combineReducers({
-  users: userReducer,
-  language: languageReducer,
   cart: cartReducer,
+  language: languageReducer,
+  user: userReducer,
 });
+
 const store = createStore(
   appReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
