@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Options = ({ title, options, moveOption }) => {
   return (
@@ -10,7 +10,7 @@ const Options = ({ title, options, moveOption }) => {
           <li key={option.id}>
             <button
               className="options__list-item"
-              onClick={() => moveOption(option.Id)}>
+              onClick={() => moveOption(option.id)}>
               {option.name}
             </button>
           </li>
@@ -19,10 +19,11 @@ const Options = ({ title, options, moveOption }) => {
     </div>
   );
 };
-Options.propTypes = {
-  title: propTypes.string.isRequired,
-  options: propTypes.arrayOf(propTypes.shape()).isRequired,
-  moveOption: propTypes.func.isRequired,
-};
+
+// Options.PropTypes = {
+//   title: PropTypes.string.isRequired,
+//   options: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+//   moveOptions: PropTypes.func.isRequired,
+// };
 
 export default Options;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { TOGGLE_OPTION } from './options.actions';
 
 const options = [
@@ -6,7 +5,6 @@ const options = [
     id: 'id-0',
     name: '19-inch wheels',
   },
-
   {
     id: 'id-1',
     name: 'Leather-trimmed Sport Seats',
@@ -32,10 +30,12 @@ const options = [
     name: 'Carbon Sport Interior',
   },
 ];
+
 const initialState = {
   optionsList: options,
   selected: [],
 };
+
 const optionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_OPTION: {
@@ -48,8 +48,10 @@ const optionsReducer = (state = initialState, action) => {
         selected: newSelectedIds,
       };
     }
-    default:
+    default: {
       return state;
+    }
   }
 };
+
 export default optionsReducer;
