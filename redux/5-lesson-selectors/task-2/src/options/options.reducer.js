@@ -1,9 +1,12 @@
 import React from 'react';
+import { TOGGLE_OPTION } from './options.actions';
+
 const options = [
   {
     id: 'id-0',
     name: '19-inch wheels',
   },
+
   {
     id: 'id-1',
     name: 'Leather-trimmed Sport Seats',
@@ -31,11 +34,22 @@ const options = [
 ];
 const initialState = {
   optionsList: options,
+  selected: [],
 };
 const optionsReducer = (state = initialState, action) => {
   switch (action.type) {
+    case TOGGLE_OPTION: {
+      const { optionId } = action.payload;
+      const newSelectedIds = state.selected.includes(optionId)
+        ? state.selected.filter((id) => id !== optionId)
+        : state.selected.concat(optionId);
+      return {
+        ...state,
+        selected: newSelectedIds,
+      };
+    }
     default:
       return state;
   }
 };
-export default optionsReducer
+export default optionsReducer;
