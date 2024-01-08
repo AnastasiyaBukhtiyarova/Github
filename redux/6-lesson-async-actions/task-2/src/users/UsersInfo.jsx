@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { isFetchingSelectors, userDataSelectors } from './users.selectors';
+import { Spinner } from './Spinner';
 
-import { useParams } from 'react-router-dom';
-
-const UserInfo = ({ userData }) => {
+const UserInfo = ({ userData, isFetching }) => {
+  if (isFetching) {
+    return <Spinner />;
+  }
   if (!userData) {
     return null;
   }
@@ -12,9 +16,15 @@ const UserInfo = ({ userData }) => {
       <img alt="User Avatar" src={avatar_url} className="user__avatar" />
       <div className="user__info">
         <span className="user__name">{name}</span>
-
         <span className="user__location">{location}</span>
       </div>
     </div>
   );
 };
+const mapState = (state) => {
+  return {
+    isFetching: isFetchingSelectors(state),
+    userDataSelectors: userDataSelectors(state),
+  };
+};
+export default connect(mapState)(UserInfo);

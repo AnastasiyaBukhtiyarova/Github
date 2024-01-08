@@ -1,5 +1,5 @@
 import React from 'react';
-import UserInfo from './users/UserInfo'
+import UserInfo from './users/UsersInfo'
 import SearchField from './users/SearchField'
 import './index.scss';
 import store from './store.js'

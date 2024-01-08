@@ -1,16 +1,22 @@
-export const ADD_USER = 'USER/ADD_USER';
-export const DELETE_USER = 'USER/REMOVE_USER ';
-
-export const addUser = (userData) => {
+export const SHOW_SPINNER = 'SHOW_SPINNER';
+export const USER_DATA_RECIEVED = 'USER_DATA_RECIEVED';
+import { getUserData } from './users.gateway';
+export const showSpinner = () => {
   return {
-    type: ADD_USER,
-    payload: { userData },
+    type: SHOW_SPINNER,
   };
 };
 
-export const deleteUser = (id) => {
+export const userDataRecieved = (userData) => {
   return {
-    type: DELETE_USER,
-    payload: id,
+    type: USER_DATA_RECIEVED,
+    payload: {userData},
+  };
+};
+export const fetchUserData = (userName) => {
+  return function (dispatch) {
+    getUserData(userName).then((userData) => {
+     return dispatch(showSpinner()), dispatch(userDataRecieved(userData));
+    });
   };
 };
