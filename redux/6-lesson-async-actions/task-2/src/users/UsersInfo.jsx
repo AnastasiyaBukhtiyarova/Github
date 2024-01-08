@@ -1,30 +1,37 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { isFetchingSelectors, userDataSelectors } from './users.selectors';
-import { Spinner } from './Spinner';
 
+import { isFetchingSelector, userDataSelector } from './users.selectors';
+import Spinner from './Spinner';
 const UserInfo = ({ userData, isFetching }) => {
-  if (isFetching) {
+  if (isFetching === true) {
     return <Spinner />;
   }
+
   if (!userData) {
     return null;
   }
-  const { avatar_url, location, name } = userData;
+
   return (
     <div className="user">
-      <img alt="User Avatar" src={avatar_url} className="user__avatar" />
+      <img
+        alt="User Avatar"
+        src={userData.avatar_url}
+        className="user__avatar"
+      />
       <div className="user__info">
-        <span className="user__name">{name}</span>
-        <span className="user__location">{location}</span>
+        <span className="user__name">{userData.name}</span>
+        <span className="user__location">{userData.location}</span>
       </div>
     </div>
   );
 };
+
 const mapState = (state) => {
   return {
-    isFetching: isFetchingSelectors(state),
-    userDataSelectors: userDataSelectors(state),
+    userData: userDataSelector(state),
+    isFetching: isFetchingSelector(state),
   };
 };
+
 export default connect(mapState)(UserInfo);

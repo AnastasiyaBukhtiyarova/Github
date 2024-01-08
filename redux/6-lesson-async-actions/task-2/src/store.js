@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import userReducer from './users/users.reducer';
-import {thunk} from 'redux-thunk';
+import usersReducer from './users/users.reducer';
+import {thunk }from 'redux-thunk';
 
 const reducer = combineReducers({
-  users: userReducer,
+  users: usersReducer,
 });
 const logger = (store) => (next) => (action) => {
   console.group(action.type);
